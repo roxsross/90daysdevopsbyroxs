@@ -1,5 +1,3 @@
-# bootcamp-devops
-by Roxs
 
 # 🚀 90 Días de DevOps con Roxs
 
