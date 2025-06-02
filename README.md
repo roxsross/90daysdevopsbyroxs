@@ -10,7 +10,6 @@
 [![GitHub forks](https://img.shields.io/github/forks/roxsross/90daysdevopsbyroxs)](https://github.com/roxsross/90daysdevopsbyroxs/network)
 [![GitHub issues](https://img.shields.io/github/issues/roxsross/90daysdevopsbyroxs)](https://github.com/roxsross/90daysdevopsbyroxs/issues)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Discord](https://img.shields.io/discord/123456789?label=Discord&logo=discord)](https://discord.gg/devops-bootcamp)
 
 ---
 

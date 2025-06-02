@@ -1,261 +1,463 @@
-¡Me alegra que te guste! Aquí te dejo **el programa completo de 90 días** de **DevOps con Roxs**, con todos los detalles de cada semana, incluyendo los cambios y la integración de **Vagrant** sin Docker en la primera semana. Este programa está diseñado para cubrir todos los aspectos fundamentales de **DevOps** con un enfoque práctico en un **proyecto real** que los estudiantes desarrollarán a lo largo del curso.
+# 🚀 90 Días de DevOps con Roxs
+
+![DevOps Banner](./static/images/banner/devops-challenge-banner.png)
+
+> **Transformá tu carrera tech en 90 días** 🔥  
+> El programa más completo e intensivo de DevOps en español, diseñado para llevarte desde cero hasta profesional.
+
+[![GitHub stars](https://img.shields.io/github/stars/roxsross/90daysdevopsbyroxs)](https://github.com/roxsross/90daysdevopsbyroxs/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/roxsross/90daysdevopsbyroxs)](https://github.com/roxsross/90daysdevopsbyroxs/network)
+[![GitHub issues](https://img.shields.io/github/issues/roxsross/90daysdevopsbyroxs)](https://github.com/roxsross/90daysdevopsbyroxs/issues)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 ---
 
-# **90 Días de DevOps con Roxs: El Camino Completo para Principiantes**
+## 📋 Tabla de Contenidos
 
-### **Objetivo del Programa:**
-
-El programa **“90 Días de DevOps con Roxs”** está diseñado para enseñar a los principiantes los principios fundamentales de **DevOps** a través de un enfoque práctico. Durante los 90 días, los participantes trabajarán en un **proyecto real** que les permitirá implementar un ciclo completo de **desarrollo, integración, entrega continua (CI/CD)** y **monitoreo** en sus aplicaciones, utilizando herramientas clave como **Docker**, **Kubernetes**, **Terraform**, **Ansible**, **Prometheus**, **Grafana**, y **AWS** (opcional).
-
----
-
-## **Semana 1-3: Fundamentos de DevOps, Linux y Automización con Vagrant y Ansible**
-
-#### **Semana 1: Introducción a DevOps, Fundamentos de Linux y Levantamiento de Aplicaciones con Vagrant (sin Docker)**
-
-**Objetivo:** Introducir los principios de **DevOps**, aprender a configurar entornos locales con **Vagrant** sin depender de **Docker**, y establecer una base sólida con **Linux** y scripting básico.
-
-##### **Contenido:**
-
-* **Fundamentos de DevOps:**
-
-  * **¿Qué es DevOps?** Principios, beneficios y cultura.
-  * **DevOps en el ciclo de vida del software**: planificación, desarrollo, integración, pruebas, despliegue, monitoreo y retroalimentación.
-  * **Integración continua (CI)** y **entrega continua (CD)** en el ciclo de vida del software.
-
-* **Fundamentos de Linux:**
-
-  * **Comandos básicos en Linux**: `ls`, `cd`, `chmod`, `top`, `ps`, etc.
-  * **Scripting en Bash** para automatización de tareas en Linux.
-
-* **Levantar Aplicaciones con Vagrant (sin Docker):**
-
-  * **Vagrant**: Instalación de **Vagrant** y **VirtualBox** para crear y gestionar entornos virtualizados.
-  * **Automatización con Vagrant**: Usar **Vagrant** para levantar un entorno de desarrollo básico sin **Docker**.
-  * **Automatización con Ansible**: Instalación de **Ansible** y creación de **Playbooks** para automatizar la configuración (instalar dependencias, configurar red, etc.).
-
-##### **Proyecto de la Semana:**
-
-* **Levantamiento de la Aplicación Localmente con Vagrant**:
-
-  * Crear una máquina virtual con **Vagrant** y configurarla para levantar una aplicación básica (por ejemplo, **Flask** o **Node.js**).
-  * Usar **Ansible** para automatizar la instalación de las dependencias necesarias y la configuración de la máquina virtual.
+- [Sobre el Proyecto](#-sobre-el-proyecto)
+- [¿Qué Vas a Aprender?](#-qué-vas-a-aprender)
+- [Estructura del Programa](#-estructura-del-programa)
+- [Prerequisitos](#-prerequisitos)
+- [Instalación y Setup](#️-instalación-y-setup)
+- [Cómo Usar Este Repositorio](#-cómo-usar-este-repositorio)
+- [Cronograma de 13 Semanas](#-cronograma-de-13-semanas)
+- [Proyecto Principal](#-proyecto-principal-roxs-voting-app)
+- [Tecnologías y Herramientas](#-tecnologías-y-herramientas)
+- [Comunidad](#-comunidad)
+- [Contribuir](#-contribuir)
+- [Reconocimientos](#-reconocimientos)
+- [Licencia](#-licencia)
+- [Contacto](#-contacto)
 
 ---
 
-#### **Semana 2: Dockerización de la Aplicación y Orquestación con Docker Compose**
+## 🎯 Sobre el Proyecto
 
-**Objetivo:** Dockerizar la aplicación y aprender a usar **Docker Compose** para gestionar múltiples contenedores.
+**90 Días de DevOps con Roxs** es un programa intensivo y **100% práctico** que te lleva desde los fundamentos hasta implementaciones avanzadas de DevOps. No es solo teoría - construirás proyectos reales, automatizarás procesos completos y desarrollarás las habilidades que demandan las empresas tech.
 
-##### **Contenido:**
+### 🔥 ¿Por qué este programa es diferente?
 
-* **Docker:**
-
-  * Instalación y configuración de **Docker Desktop**.
-  * Creación de un **Dockerfile** para dockerizar una aplicación web (ej. **Flask** o **Node.js**).
-* **Docker Compose:**
-
-  * Uso de **Docker Compose** para gestionar múltiples contenedores (por ejemplo, backend + base de datos).
-  * Conexión de servicios mediante redes Docker personalizadas.
-
-##### **Proyecto de la Semana:**
-
-* Dockerizar una aplicación web y sus dependencias (base de datos, backend) y configurarlas mediante **Docker Compose**.
+- **📚 Aprende Haciendo**: Cada día incluye ejercicios prácticos y proyectos reales
+- **🌍 Código Abierto**: Todo el contenido es gratuito y colaborativo
+- **🎖️ Metodología Probada**: Basado en experiencias reales de la industria
+- **🤝 Comunidad Activa**: Soporte continuo de instructores y peers
+- **💼 Portfolio Ready**: Termina con proyectos listos para mostrar a empleadores
 
 ---
 
-#### **Semana 3: CI/CD con GitHub Actions y Self-Hosted Runner**
+## 🎓 ¿Qué Vas a Aprender?
 
-**Objetivo:** Integrar **GitHub Actions** en un **self-hosted runner** para automatizar la construcción y despliegue de la aplicación.
+### 🛠️ Habilidades Técnicas
 
-##### **Contenido:**
+- **Containerización** con Docker y orquestación con Kubernetes
+- **Infrastructure as Code** con Terraform y Ansible
+- **CI/CD Pipelines** con GitHub Actions, Jenkins y GitLab
+- **Cloud Computing** en AWS, Azure y Google Cloud
+- **Monitoring y Observabilidad** con Prometheus, Grafana y ELK Stack
+- **Security** integrada en el ciclo DevOps (DevSecOps)
 
-* **GitHub Actions:**
+### 💡 Habilidades Blandas
 
-  * Configuración básica de **GitHub Actions** en un repositorio de GitHub.
-  * Creación de un **self-hosted runner** para ejecutar los workflows de CI/CD en tu propia máquina local.
-* **CI/CD con GitHub Actions:**
-
-  * Creación de pipelines de **CI/CD** con **GitHub Actions** para construir, probar y desplegar automáticamente la aplicación.
-
-##### **Proyecto de la Semana:**
-
-* Configurar un **self-hosted runner** en tu máquina local y crear un pipeline de **GitHub Actions** para automatizar la construcción y el despliegue de la aplicación.
-
----
-
-## **Semana 4-6: Terraform, Kubernetes y CI/CD**
-
-#### **Semana 4: Introducción a Terraform con Provider Local**
-
-**Objetivo:** Introducir a los participantes en **Terraform** y enseñarles a gestionar infraestructura local.
-
-##### **Contenido:**
-
-* **Terraform:**
-
-  * Fundamentos de **Terraform**: ¿Qué es y cómo usarlo?
-  * Uso del **provider local** de Terraform para crear infraestructura local (archivos, directorios, recursos locales).
-* **Automatización local** de recursos como archivos de configuración o scripts utilizando Terraform.
-
-##### **Proyecto de la Semana:**
-
-* Crear un archivo **main.tf** para definir infraestructura local (por ejemplo, directorios o archivos de configuración) usando el **provider local** de **Terraform**.
+- **Mentalidad DevOps**: Colaboración entre Dev y Ops
+- **Problem Solving**: Debugging y troubleshooting avanzado
+- **Automatización**: Identificar y automatizar procesos manuales
+- **Mejora Continua**: Optimización constante de workflows
 
 ---
 
-#### **Semana 5: Introducción a Kubernetes y Despliegue Local**
+## 🏗️ Estructura del Programa
 
-**Objetivo:** Configurar un clúster de **Kubernetes** local y aprender a desplegar aplicaciones.
-
-##### **Contenido:**
-
-* Instalación de **Minikube** o **Docker Desktop** para crear un clúster **Kubernetes** local.
-* Fundamentos de **Kubernetes**: Pods, Deployments, Services.
-
-##### **Proyecto de la Semana:**
-
-* Crear y desplegar una aplicación en un clúster **Kubernetes** local usando **Minikube** o **Docker Desktop**.
-
----
-
-#### **Semana 6: CI/CD con GitHub Actions y Despliegue en Kubernetes**
-
-**Objetivo:** Configurar **CI/CD** para despliegue automático en **Kubernetes**.
-
-##### **Contenido:**
-
-* Crear un pipeline CI/CD que se integre con **Kubernetes** para despliegue automático.
-* Uso de **Helm** para gestionar los despliegues en Kubernetes.
-
-##### **Proyecto de la Semana:**
-
-* Mejorar el pipeline CI/CD para que automatice el despliegue en **Kubernetes** y configure el monitoreo en el clúster con **Prometheus** y **Grafana**.
+```
+📦 90-dias-devops/
+├── 📁 semana-01-fundamentos/          # Linux, Git, Networking
+├── 📁 semana-02-programacion/         # Python, Go, scripting
+├── 📁 semana-03-control-versiones/    # Git avanzado, workflows
+├── 📁 semana-04-docker-compose/       # Containerización básica
+├── 📁 semana-05-terraform-docker/     # Infrastructure as Code
+├── 📁 semana-06-kubernetes/           # Orquestación de containers
+├── 📁 semana-07-kubernetes-avanzado/  # Deployments, services, ingress
+├── 📁 semana-08-cicd/                 # Pipelines automatizados
+├── 📁 semana-09-gitops-argocd/        # GitOps y ArgoCD
+├── 📁 semana-10-monitoring/           # Observabilidad
+├── 📁 semana-11-cloud-aws/            # Amazon Web Services
+├── 📁 semana-12-devsecops/            # Security integration
+└── 📁 semana-13-proyecto-final/       # Capstone project
+```
 
 ---
 
-## **Semana 7-9: Seguridad, Troubleshooting y Despliegue en AWS (Opcional)**
+## ✅ Prerequisitos
 
-#### **Semana 7: Seguridad en Kubernetes**
+### 🖥️ Hardware Mínimo
+- **RAM**: 8GB (recomendado 16GB)
+- **Almacenamiento**: 50GB libres
+- **Procesador**: Dual core (recomendado Quad core)
 
-**Objetivo:** Implementar buenas prácticas de seguridad en **Kubernetes**.
+### 💻 Software Requerido
+- **Sistema Operativo**: Linux, macOS, o Windows con WSL2
+- **Navegador**: Chrome/Firefox actualizado
+- **Editor**: VSCode (recomendado) o tu editor preferido
 
-##### **Contenido:**
-
-* Configuración de **autoscaling** con **Horizontal Pod Autoscaler (HPA)**.
-* Configuración de seguridad con **RBAC** y **Secrets** en **Kubernetes**.
-
-##### **Proyecto de la Semana:**
-
-* Configurar **autoscaling** y **RBAC** en el clúster de **Kubernetes** para mejorar la seguridad y escalabilidad.
-
----
-
-#### **Semana 8: Troubleshooting y Optimización de Kubernetes**
-
-**Objetivo:** Diagnosticar y solucionar problemas en el clúster **Kubernetes**.
-
-##### **Contenido:**
-
-* Uso de **kubectl** para depurar aplicaciones y contenedores en **Kubernetes**.
-* Optimización del uso de recursos en **Kubernetes** (memoria, CPU, etc.).
-
-##### **Proyecto de la Semana:**
-
-* Solucionar problemas comunes en el despliegue de la aplicación en **Kubernetes** (problemas de recursos, fallos en pods).
-* Optimizar la infraestructura de **Kubernetes**.
+### 🧠 Conocimientos Previos
+- **Básicos de línea de comandos** (bash/terminal)
+- **Conceptos básicos de redes** (IP, puertos, HTTP)
+- **Experiencia con cualquier lenguaje de programación** (helpful but not required)
 
 ---
 
-#### **Semana 9: Despliegue en la Nube con AWS (Opcional)**
+## ⚙️ Instalación y Setup
 
-**Objetivo:** Desplegar la aplicación en **AWS** utilizando **EC2** o **EKS**.
+### 1. 🔄 Clonar el Repositorio
 
-##### **Contenido:**
+```bash
+git clone https://github.com/roxsross/bootcamp-devops-2023.git
+cd bootcamp-devops-2023
+```
 
-* Introducción a **AWS**: Creación de cuenta, uso de **EC2** y **EKS**.
-* Despliegue de la aplicación en **AWS EC2** o en **Amazon EKS**.
+### 2. 🐳 Instalar Docker
 
-##### **Proyecto Opcional:**
+#### Linux (Ubuntu/Debian)
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+sudo usermod -aG docker $USER
+```
 
-* Desplegar la aplicación en **AWS EC2** o usar **Amazon EKS** para gestionar el clúster de **Kubernetes** en la nube.
+#### macOS
+```bash
+brew install --cask docker
+```
 
----
+#### Windows
+Descargar [Docker Desktop](https://www.docker.com/products/docker-desktop)
 
-## **Semana 10-12: Terraform, Optimización y Bonus AWS (Opcional)**
+### 3. 🔧 Verificar Instalación
 
-#### **Semana 10: Terraform para Infraestructura como Código**
+```bash
+# Verificar Docker
+docker --version
+docker run hello-world
 
-**Objetivo:** Gestionar infraestructura en **AWS** utilizando **Terraform**.
+# Verificar Git
+git --version
 
-##### **Contenido:**
+# Verificar que tienes acceso a internet
+curl -I https://github.com
+```
 
-* Introducción al **provider AWS** de **Terraform**.
-* Creación de infraestructura en **AWS**: **EC2**, **RDS**, **EKS** usando **Terraform**.
+### 4. 🚀 Setup Inicial
 
-##### **Proyecto de la Semana:**
+```bash
+# Crear tu branch de trabajo
+git checkout -b mi-progreso-devops
 
-* Crear y gestionar la infraestructura en **AWS** (EC2, RDS) utilizando **Terraform**.
+# Instalar herramientas adicionales
+./scripts/setup-environment.sh
 
----
-
-#### **Semana 11: Despliegue Completo con CI/CD en AWS**
-
-**Objetivo:** Automatizar el despliegue en **AWS** utilizando **Terraform** y **CI/CD**.
-
-##### **Contenido:**
-
-* Crear un pipeline **CI/CD** para desplegar la aplicación en **AWS EC2** o **EKS**.
-* Integración de **Terraform** con **AWS CodePipeline** o **GitHub Actions**.
-
-##### **Proyecto de la Semana:**
-
-* Automatizar el despliegue de la aplicación en **AWS** utilizando **Terraform** y un pipeline CI/CD.
-
----
-
-#### **Semana 12: Seguridad Final y Optimización**
-
-**Objetivo:** Revisión final de seguridad y optimización.
-
-##### **Contenido:**
-
-* Revisión de **seguridad** en **AWS** y **Kubernetes**.
-* Optimización de los costos y rendimiento en **AWS** utilizando **Auto Scaling**, **RDS**, **EKS**.
-
-##### **Proyecto Final:**
-
-* Implementar seguridad avanzada en **AWS** y **Kubernetes**.
-* Realizar una revisión final del proyecto y entrega del informe.
+# Verificar que todo funciona
+./scripts/verify-setup.sh
+```
 
 ---
 
-### **Recursos y Herramientas:**
+## 📖 Cómo Usar Este Repositorio
 
-* **Docker**, **Kubernetes** (Minikube/EKS), **Helm**.
-* **Vagrant** y **Ansible** para automatización de infraestructura local.
-* **Terraform** (local, AWS provider).
-* **GitHub Actions** con **self-hosted runner** para CI/CD.
-* **Prometheus**, **Grafana** para monitoreo.
-* **AWS** para servicios en la nube (opcional).
-* **Trivy** para escaneos de seguridad.
+### 🗓️ Progresión Semanal
+
+1. **📚 Lee la documentación** de la semana en `/semana-XX/README.md`
+2. **🎯 Completa los ejercicios** paso a paso
+3. **💾 Documenta tu progreso** en tu branch personal
+4. **🔄 Comparte en la comunidad** tus resultados y dudas
+5. **🎉 Celebra** cada milestone completado
+
+### 📁 Estructura de Cada Semana
+
+```
+semana-XX/
+├── README.md              # Objetivos y teoría
+├── ejercicios/            # Prácticas hands-on
+│   ├── ejercicio-01/
+│   ├── ejercicio-02/
+│   └── proyecto-semanal/
+├── recursos/              # Scripts, configs, ejemplos
+├── solucion/              # Soluciones de referencia
+└── extra/                 # Material adicional
+```
+
+### 🏷️ Convenciones de Commits
+
+```bash
+# Formato recomendado
+git commit -m "feat(semana-04): completar ejercicio Docker Compose"
+git commit -m "docs(semana-07): agregar notas sobre Kubernetes"
+git commit -m "fix(semana-10): corregir configuración Prometheus"
+```
 
 ---
 
-### **Resultados Esperados:**
+## 📅 Cronograma de 13 Semanas
 
-* Los participantes aprenderán a gestionar **infraestructuras locales** con **Ansible** y **Vagrant**.
-* Desarrollarán habilidades en **Kubernetes**, **CI/CD**, **Terraform**, y **AWS** (opcional).
-* Configurarán y optimizarán **monitoreo** con **Prometheus** y **Grafana**.
-* Implementarán **CI/CD** y **infraestructura como código (IaC)** para automatizar despliegues y mejorar la eficiencia operativa.
+| Semana | Tema | Proyecto | Duración |
+|--------|------|----------|----------|
+| **1** | 🐧 **Fundamentos Linux** | Automatización con scripts | 7 días |
+| **2** | 🐍 **Lenguajes DevOps** | CLI tool en Python/Go | 7 días |
+| **3** | 🌿 **Git Avanzado** | Workflow colaborativo | 7 días |
+| **4** | 🐳 **Docker & Compose** | Multi-container app | 7 días |
+| **5** | 🏗️ **Terraform + Docker** | Infrastructure as Code | 7 días |
+| **6** | ☸️ **Kubernetes Basics** | Cluster setup y pods | 7 días |
+| **7** | 🚀 **Kubernetes Pro** | Voting app en K8s | 7 días |
+| **8** | 🔄 **CI/CD Pipelines** | Automated deployments | 7 días |
+| **9** | 🎯 **GitOps & ArgoCD** | GitOps workflow | 7 días |
+| **10** | 📊 **Monitoring** | Observabilidad completa | 7 días |
+| **11** | ☁️ **Cloud AWS** | Infraestructura cloud | 7 días |
+| **12** | 🔒 **DevSecOps** | Security integration | 7 días |
+| **13** | 🎖️ **Proyecto Final** | Portfolio capstone | 7 días |
 
 ---
 
-### **Conclusión:**
+## 🗳️ Proyecto Principal: Roxs Voting App
 
-Este programa de **90 Días de DevOps con Roxs** proporciona una experiencia intensiva y práctica en DevOps, cubriendo desde el desarrollo local hasta el despliegue en la nube con **Kubernetes** y **AWS**. Los participantes aprenderán herramientas fundamentales como **Docker**, **Kubernetes**, **Terraform**, **Ansible**, y **GitHub Actions**, mientras trabajan en un **proyecto real** que integra todos los conceptos que van aprendiendo semana a semana.
+A lo largo del programa, construirás y evolucionarás una **aplicación de votación completa** que incluye:
+
+### 🏗️ Arquitectura
+
+```mermaid
+graph TB
+    subgraph "Frontend"
+        A[Vote App - Python/Flask]
+        B[Results App - Node.js]
+    end
+    
+    subgraph "Backend Services"
+        C[Worker - .NET/Java]
+        D[Redis - Queue]
+        E[PostgreSQL - Database]
+    end
+    
+    subgraph "Infrastructure"
+        F[Docker Containers]
+        G[Kubernetes Cluster]
+        H[AWS/Cloud]
+    end
+    
+    A --> D
+    C --> D
+    C --> E
+    B --> E
+    F --> G
+    G --> H
+```
+
+### 🚀 Evolución del Proyecto
+
+- **Semana 4**: Docker Compose básico
+- **Semana 5**: Terraform para infrastructure
+- **Semana 7**: Migración a Kubernetes
+- **Semana 8**: CI/CD automatizado
+- **Semana 9**: GitOps deployment
+- **Semana 10**: Monitoring completo
+- **Semana 11**: Cloud deployment
+- **Semana 12**: Security hardening
+- **Semana 13**: Production ready
 
 ---
 
-**¡Este es el momento perfecto para comenzar a aprender DevOps de la mano de Roxs!** ¿Te gustaría ajustar algo más en el programa o agregar más detalles?
+## 🛠️ Tecnologías y Herramientas
+
+### 🏗️ Infrastructure & Containers
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
+![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
+![Ansible](https://img.shields.io/badge/ansible-%231A1918.svg?style=for-the-badge&logo=ansible&logoColor=white)
+
+### ☁️ Cloud Providers
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white)
+![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
+
+### 🔄 CI/CD & GitOps
+![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+![GitLab CI](https://img.shields.io/badge/gitlab%20ci-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white)
+![Jenkins](https://img.shields.io/badge/jenkins-%232C5263.svg?style=for-the-badge&logo=jenkins&logoColor=white)
+![ArgoCD](https://img.shields.io/badge/argo-EF7B4D.svg?style=for-the-badge&logo=argo&logoColor=white)
+
+### 📊 Monitoring & Observability
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=Prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/grafana-%23F46800.svg?style=for-the-badge&logo=grafana&logoColor=white)
+![Elastic](https://img.shields.io/badge/-ElasticSearch-005571?style=for-the-badge&logo=elasticsearch)
+
+### 💻 Programming & Scripting
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
+![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![YAML](https://img.shields.io/badge/yaml-%23ffffff.svg?style=for-the-badge&logo=yaml&logoColor=151515)
+
+---
+
+## 🌟 Comunidad
+
+### 💬 Únete a Nuestra Comunidad
+
+- **🎮 Discord**: [DevOps Bootcamp](https://discord.gg/devops-bootcamp) - Chat en tiempo real
+- **💼 LinkedIn**: [Grupo DevOps Hispano](https://linkedin.com/groups/devops-hispano) - Networking profesional
+- **🐦 Twitter**: [@DevOpsConRoxs](https://twitter.com/DevOpsConRoxs) - Updates y tips
+- **📺 YouTube**: [Roxs DevOps Channel](https://youtube.com/c/roxsdevops) - Tutoriales y lives
+
+### 📅 Eventos Semanales
+
+- **🗓️ Lunes**: Planning semanal y Q&A
+- **🗓️ Miércoles**: Live coding sessions
+- **🗓️ Viernes**: Demo day y networking
+- **🗓️ Sábados**: Office hours para dudas
+
+### 🏆 Leaderboard y Reconocimientos
+
+Seguimos el progreso de la comunidad y reconocemos a los top contributors:
+
+- **🥇 DevOps Champion**: Top performer mensual
+- **🤝 Community Helper**: Quien más ayuda a otros
+- **🔧 Tool Master**: Experto en herramientas específicas
+- **📝 Content Creator**: Mejores blogs/tutoriales
+
+---
+
+## 🤝 Contribuir
+
+¡Tu contribución hace que este programa sea mejor para todos! 
+
+### 🚀 Formas de Contribuir
+
+#### 📝 **Contenido**
+- Nuevos ejercicios y proyectos
+- Mejoras en documentación
+- Casos de estudio reales
+- Traducciones
+
+#### 🐛 **Código**
+- Corrección de bugs
+- Scripts de automatización
+- Mejoras en templates
+- Testing y validación
+
+#### 🎨 **Diseño y UX**
+- Diagramas y visualizaciones
+- Mejoras en la navegación
+- Templates y layouts
+- Iconografía
+
+### 📋 Proceso de Contribución
+
+1. **🍴 Fork** este repositorio
+2. **🌿 Crear branch** para tu feature (`git checkout -b feature/AmazingFeature`)
+3. **💾 Commit** tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. **⬆️ Push** a la branch (`git push origin feature/AmazingFeature`)
+5. **🔄 Abrir Pull Request**
+
+### 📜 Guidelines para Contributors
+
+- **📖 Lee nuestro [Contributing Guide](CONTRIBUTING.md)**
+- **🎯 Sigue nuestro [Code of Conduct](CODE_OF_CONDUCT.md)**
+- **✅ Ejecuta tests** antes de enviar PR
+- **📝 Documenta** nuevas features
+
+---
+
+## 🏆 Reconocimientos
+
+### 👥 Top Contributors
+
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/roxsross"><img src="https://avatars.githubusercontent.com/u/roxsross?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rossana Suarez</b></sub></a><br />🎯 Project Lead</td>
+    <td align="center"><a href="https://github.com/contributor1"><img src="https://via.placeholder.com/100" width="100px;" alt=""/><br /><sub><b>Contributor 1</b></sub></a><br />💻 Code</td>
+    <td align="center"><a href="https://github.com/contributor2"><img src="https://via.placeholder.com/100" width="100px;" alt=""/><br /><sub><b>Contributor 2</b></sub></a><br />📖 Docs</td>
+  </tr>
+</table>
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+### 🙏 Agradecimientos Especiales
+
+- **DevOps Community** por su feedback constante
+- **Open Source Maintainers** de las herramientas que usamos
+- **Students** que han completado el programa y compartido mejoras
+- **Industry Partners** que proporcionan casos de uso reales
+
+---
+
+## 📊 Estadísticas del Proyecto
+
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/roxsross/90daysdevopsbyroxs)
+![GitHub last commit](https://img.shields.io/github/last-commit/roxsross/90daysdevopsbyroxs)
+![GitHub contributors](https://img.shields.io/github/contributors/roxsross/90daysdevopsbyroxs)
+![GitHub language count](https://img.shields.io/github/languages/count/roxsross/90daysdevopsbyroxs)
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para detalles.
+
+### 🤝 ¿Qué significa esto?
+
+- ✅ **Uso comercial** permitido
+- ✅ **Modificación** permitida  
+- ✅ **Distribución** permitida
+- ✅ **Uso privado** permitido
+- ❗ **Incluir licencia** en distribuciones
+
+---
+
+## 📞 Contacto
+
+### 👩‍💻 Rossana Suarez (Roxs)
+
+- **🌐 Website**: [roxs.dev](https://roxs.dev)
+- **📧 Email**: roxs@devops-bootcamp.com
+- **💼 LinkedIn**: [/in/roxsross](https://linkedin.com/in/roxsross)
+- **🐦 Twitter**: [@roxsross](https://twitter.com/roxsross)
+- **📺 YouTube**: [Roxs DevOps](https://youtube.com/c/roxsdevops)
+
+### 📬 Para el Proyecto
+
+- **🐛 Issues**: [GitHub Issues](https://github.com/roxsross/90daysdevopsbyroxs/issues)
+- **💡 Feature Requests**: [GitHub Discussions](https://github.com/roxsross/90daysdevopsbyroxs/discussions)
+- **❓ Q&A**: [Discord #general](https://discord.gg/devops-bootcamp)
+- **📧 Email**: support@devops-bootcamp.com
+
+---
+
+## 🎯 ¿Listo para Comenzar?
+
+### 🚀 Next Steps
+
+1. **⭐ Star** este repositorio para mantenerte actualizado
+2. **🍴 Fork** para empezar tu journey personal
+3. **💬 Únete** a nuestra comunidad en Discord
+4. **📖 Lee** la documentación de la Semana 1
+5. **🔥 ¡Comienza a construir!**
+
+---
+
+<div align="center">
+
+## 💪 ¡Tu Futuro DevOps Comienza AQUÍ!
+
+**"La mejor manera de predecir el futuro es construirlo"**
+
+[🚀 Comenzar Ahora](./semana-01-fundamentos/README.md) | [💬 Unirse a la Comunidad](https://discord.gg/devops-bootcamp) | [📺 Ver Videos](https://youtube.com/c/roxsdevops)
+
+---
+
+### ⭐ Si este proyecto te ayuda, ¡dale una estrella!
+
+[![Stargazers repo roster for @roxsross/90daysdevopsbyroxs](https://reporoster.com/stars/roxsross/90daysdevopsbyroxs)](https://github.com/roxsross/90daysdevopsbyroxs/stargazers)
+
+---
+
+**Hecho con ❤️ por la comunidad DevOps hispana**
+
+</div>
