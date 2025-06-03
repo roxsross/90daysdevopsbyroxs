@@ -1,7 +1,7 @@
 ---
 title: Día 40 - Pipeline CI/CD para Kubernetes con GitHub Actions y Helm
 description: Automatizá el despliegue a Kubernetes con workflows y Helm
-sidebar_position: 10
+sidebar_position: 5
 ---
 
 ## ⚙️ Día 40: Despliegue a Kubernetes desde GitHub Actions

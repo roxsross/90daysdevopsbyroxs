@@ -1,5 +1,5 @@
 ---
-title: Observabilidad en Kubernetes Local con Helm y Kind
+title: Día 55 - Observabilidad en Kubernetes Local con Helm y Kind
 description: Instala un stack de observabilidad en un cluster local Kind usando Helm.
 sidebar_position: 6
 ---

@@ -1,7 +1,7 @@
 ---
 title: Día 38 - Buenas Prácticas de Despliegue en Kubernetes
 description: Estrategias de rollout, readiness, liveness y rollback automático
-sidebar_position: 7
+sidebar_position: 73
 ---
 
 ## 🔁 Despliegues en Kubernetes

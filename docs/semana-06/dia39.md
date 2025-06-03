@@ -1,7 +1,7 @@
 ---
 title: Día 39 - Introducción a Helm
 description: Primeros pasos con Helm ¿qué es, para qué sirve y cómo empezar a usarlo?
-sidebar_position: 9
+sidebar_position: 4
 ---
 
 ## 🚀 Helm: Tu Primer Chart
