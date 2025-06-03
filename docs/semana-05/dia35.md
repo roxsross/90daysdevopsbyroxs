@@ -35,6 +35,9 @@ Recuerda que roxs-voting-app tiene **5 componentes**:
 └─────────────┘    └──────────────┘    └─────────────┘
 ```
 
+
+![](https://miro.medium.com/v2/resize:fit:1400/1*rVKG8VcjIislc7sUG9VpaQ.png)
+
 ---
 
 ## 📋 Plan de Trabajo - ¿Cómo vas a abordarlo?
