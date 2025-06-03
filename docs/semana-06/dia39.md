@@ -1,139 +1,100 @@
 ---
-title: Día 39 - Helm Avanzado: Personalización y Publicación de Charts
-description: Aprendé a modificar charts, hacer upgrades y publicar tus propios paquetes Helm
+title: Día 39 - Introducción a Helm
+description: Primeros pasos con Helm: ¿qué es, para qué sirve y cómo empezar a usarlo?
 sidebar_position: 9
 ---
 
-## 🧙‍♀️ Día 39: Helm como una Pro
+## 🚀 Helm: Tu Primer Chart
 
 ![](../../static/images/banner/6.png)
 
-> “Un chart sin valores customizados es como un café sin azúcar: no sirve para todos.”
+> “Helm es el gestor de paquetes de Kubernetes: te ayuda a instalar, actualizar y compartir aplicaciones fácilmente.”
 
 Hoy vas a:
 
-- Customizar tu chart usando `values.yaml`
-- Usar flags `--set` y `--values` para ambientes
-- Hacer upgrades sin downtime
-- Publicar tu chart en GitHub Pages
+- Entender qué es Helm y para qué se usa
+- Instalar Helm en tu máquina
+- Crear tu primer chart
+- Desplegar una app en Kubernetes usando Helm
 
 ---
 
 ## 🎯 Objetivo
 
-- Gestionar diferentes entornos (`dev`, `prod`)
-- Aplicar actualizaciones sin perder el estado
-- Versionar tu chart
-- Hacerlo accesible para otros/as
+- Comprender el rol de Helm en Kubernetes
+- Instalar y configurar Helm
+- Crear y desplegar un chart básico
 
 ---
 
-## 🔧 Paso 1: Variables por entorno
+## 🛠️ Paso 1: ¿Qué es Helm?
 
-🗂️ Estructura sugerida:
+Helm es una herramienta que facilita la gestión de aplicaciones en Kubernetes mediante “charts”, que son paquetes preconfigurados listos para instalar.
 
-```
-
-roxs-chart/
-├── values-dev.yaml
-├── values-prod.yaml
-├── Chart.yaml
-└── templates/
-
-````
-
-📄 `values-dev.yaml`
-
-```yaml
-replicaCount: 1
-image:
-  tag: dev
-````
-
-📄 `values-prod.yaml`
-
-```yaml
-replicaCount: 3
-image:
-  tag: stable
-```
+- Simplifica despliegues complejos
+- Permite reutilizar configuraciones
+- Facilita upgrades y rollbacks
 
 ---
 
-## 🚀 Paso 2: Upgrade con valores
+## ⚡ Paso 2: Instalá Helm
+
+**En Mac:**
 
 ```bash
-# Desplegar en dev
-helm upgrade --install mi-app ./roxs-chart -f values-dev.yaml
-
-# Desplegar en prod
-helm upgrade --install mi-app ./roxs-chart -f values-prod.yaml
+brew install helm
 ```
 
-🎯 También podés usar variables inline:
+**En Linux:**
 
 ```bash
-helm upgrade --install mi-app ./roxs-chart \
-  --set replicaCount=2,image.tag=testing
+curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+```
+
+Verificá la instalación:
+
+```bash
+helm version
 ```
 
 ---
 
-## 📌 Paso 3: Versionar tu Chart
+## 📦 Paso 3: Tu primer chart
 
-📄 `Chart.yaml`
+Crea un nuevo chart:
 
-```yaml
-apiVersion: v2
-name: roxs-chart
-description: Mi app increíble
-type: application
-version: 1.2.0
-appVersion: "1.2.0"
+```bash
+helm create mi-primer-chart
 ```
 
-⚠️ Cada vez que lo actualices, cambiá `version`.
+Esto genera una estructura con archivos y templates listos para usar.
 
 ---
 
-## 🌍 Paso 4: Publicar tu chart en GitHub Pages
+## 🚀 Paso 4: Desplegá con Helm
 
-1. Crear carpeta `charts` y mover tu `.tgz`:
+Instalá tu chart en Kubernetes:
 
 ```bash
-helm package roxs-chart
-mkdir -p charts
-mv roxs-chart-1.2.0.tgz charts/
+helm install mi-app ./mi-primer-chart
 ```
 
-2. Generar `index.yaml`
+Verificá el release:
 
 ```bash
-helm repo index charts --url https://TU-USUARIO.github.io/TU-REPO/charts
-```
-
-3. Subí `charts/` a tu rama `gh-pages`.
-
-4. ¡Ya tenés tu propio Helm repo!
-   Podés instalarlo con:
-
-```bash
-helm repo add roxs https://TU-USUARIO.github.io/TU-REPO/charts
-helm install roxs-miapp roxs/roxs-chart
+helm list
 ```
 
 ---
 
 ## 🧪 Tarea del Día
 
-1. Crear valores por entorno (dev/prod)
-2. Hacer upgrades con diferentes valores
-3. Empaquetar tu chart
-4. Publicarlo en GitHub Pages
-5. Usarlo como si fuera un repo externo
+1. Instalar Helm en tu entorno
+2. Crear un chart básico
+3. Desplegarlo en tu clúster
+4. Probar `helm list` y `helm uninstall`
 
-🎁 Bonus: Crear un README en `charts/` explicando cómo instalar tu app
-📸 Mostrá tu `helm upgrade` en acción con **#DevOpsConRoxs - Día 39**
+🎁 Bonus: Explorá los archivos generados por `helm create`
 
 ---
 
@@ -141,16 +102,16 @@ helm install roxs-miapp roxs/roxs-chart
 
 | Pregunta                                 | ✔️ / ❌ |
 | ---------------------------------------- | ------ |
-| ¿Qué hace `--set` y `--values`?          |        |
-| ¿Dónde se define la versión de tu chart? |        |
-| ¿Podés usar tu propio Helm repo?         |        |
-| ¿Cómo hacés rollback si algo falla?      |        |
+| ¿Qué es un chart en Helm?                |        |
+| ¿Cómo instalás Helm?                     |        |
+| ¿Qué comando crea un chart nuevo?        |        |
+| ¿Cómo eliminás un release?               |        |
 
 ---
 
 ## ✨ Cierre del Día
 
-Hoy no solo desplegás... ¡ahora también **publicás**!
-Helm te da superpoderes para manejar entornos, control de versiones, y compartir tu trabajo con otros/as DevOps. 🧙‍♂️
+¡Listo! Hoy diste tus primeros pasos con Helm y ya podés gestionar aplicaciones en Kubernetes de forma más simple y ordenada. Mañana veremos cómo personalizar y compartir tus charts. 🚀
 
-Nos vemos en el **Día 40** 🚀
+Nos vemos en el **Día 40** 🧙‍♂️
+

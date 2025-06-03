@@ -18,23 +18,6 @@ Hoy vas a desplegar la **aplicación completa roxs-voting-app** en tu clúster l
 
 Recuerda que roxs-voting-app tiene **5 componentes**:
 
-```
-┌─────────────┐    ┌──────────────┐    ┌─────────────┐
-│    vote     │    │   worker     │    │   result    │
-│  (Flask)    │    │  (Node.js)   │    │ Procesa y   │
-│   Port 80   │    │ Procesa votos│    │ muestra     │
-│             │    │              │    │  Port 3000  │
-└─────────────┘    └──────────────┘    └─────────────┘
-       │                   │                   │
-       │                   │                   │
-       ▼                   ▼                   ▼
-┌─────────────┐    ┌──────────────┐    ┌─────────────┐
-│    redis    │    │              │    │ postgresql  │
-│   Port 6379 │    │              │    │  Port 5432  │
-│ (Cache votos)│    │              │    │(Almacén BD) │
-└─────────────┘    └──────────────┘    └─────────────┘
-```
-
 
 ![](https://miro.medium.com/v2/resize:fit:1400/1*rVKG8VcjIislc7sUG9VpaQ.png)
 

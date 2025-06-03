@@ -1,5 +1,5 @@
 ---
-title: Día 41 - CI/CD completo: Test, Build, Push y Deploy en Kubernetes con kubectl
+title: Día 41 - CI/CD Test, Build, Push y Deploy en Kubernetes con kubectl
 description: Pipeline DevOps real desde cero con GitHub Actions, Docker Hub y kubectl
 sidebar_position: 11
 ---

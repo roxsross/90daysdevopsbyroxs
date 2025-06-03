@@ -55,6 +55,8 @@ docker --version
 2. Click en **“New self-hosted runner”**
 3. Elegí Linux y copiá el token y comandos que te da
 
+![](../../static/images/semana3/1.png)
+
 ---
 
 ## 🔧 Paso 3: Configurar el runner
@@ -78,6 +80,7 @@ tar xzf actions-runner-linux-x64-2.311.0.tar.gz
   --replace
 ```
 
+![](../../static/images/semana3/3.png)
 ---
 
 ## 🚀 Paso 4: Ejecutar el runner
@@ -85,11 +88,9 @@ tar xzf actions-runner-linux-x64-2.311.0.tar.gz
 ```bash
 # Modo manual
 ./run.sh
-
-# O como servicio (más pro)
-sudo ./svc.sh install
-sudo ./svc.sh start
 ```
+
+![](../../static/images/semana3/2.png)
 
 ---
 
@@ -107,7 +108,7 @@ on:
 
 jobs:
   test-local:
-    runs-on: [self-hosted, linux, rox]
+    runs-on: [self-hosted]
     
     steps:
     - name: Clonar código
@@ -119,15 +120,10 @@ jobs:
         echo "🔧 Usuario: $(whoami)"
         echo "🕓 Fecha: $(date)"
 
-    - name: Probar app local
-      run: |
-        pip3 install flask || sudo apt install -y python3-pip && pip3 install flask
-        python3 app.py &
-        sleep 5
-        curl -f http://localhost:5000/health
-        pkill -f app.py
 ```
+![](../../static/images/semana3/4.png)
 
+![](../../static/images/semana3/5.png)
 ---
 
 ## 🐳 Extra: Usar Docker en el runner
@@ -143,7 +139,7 @@ on:
 
 jobs:
   docker-build:
-    runs-on: [self-hosted, linux, rox]
+    runs-on: [self-hosted]
 
     steps:
     - uses: actions/checkout@v4

@@ -1,149 +1,142 @@
 ---
-title: Día 38 - Introducción a Helm
-description: Aprende qué es Helm, cómo instalarlo y crear tu primer chart
-sidebar_position: 8
+title: Día 38 - Buenas Prácticas de Despliegue en Kubernetes
+description: Estrategias de rollout, readiness, liveness y rollback automático
+sidebar_position: 7
 ---
 
-## 🎩 Día 38: Introducción a Helm
+## 🔁 Despliegues en Kubernetes
 
 ![](../../static/images/banner/6.png)
 
-> “Helm es como el `apt` o `yum` de Kubernetes, pero con superpoderes para DevOps.”
+> "Desplegar no es solo aplicar un `kubectl apply`. Es cuidar la salud, el tiempo de vida y la experiencia del usuario."
 
-Hoy vas a:
+Hoy vas a aprender a:
 
-- Entender qué es **Helm** y por qué es tan poderoso
-- Instalarlo y usar tu primer **chart**
-- Crear tu **propio Helm Chart** para tu aplicación
-
----
-
-## 🧠 ¿Qué es Helm?
-
-Helm es el **gestor de paquetes de Kubernetes**. Te permite:
-
-✅ Instalar aplicaciones como NGINX, Prometheus o Grafana con un solo comando  
-✅ Empaquetar tu propia app como un "chart"  
-✅ Reusar configuraciones con valores  
-✅ Tener versionado y rollback de despliegues
+- Aplicar **estrategias de rollout** (RollingUpdate, Recreate)
+- Usar **probes** (`liveness`, `readiness`)
+- Hacer **rollback automático**
+- Ver eventos y estado del despliegue en tiempo real
 
 ---
 
-## 🛠️ Paso 1: Instalar Helm
+## 🧠 Conceptos clave
 
-```bash
-# Linux / Mac
-curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+| Concepto        | ¿Para qué sirve?                                         |
+|-----------------|----------------------------------------------------------|
+| **RollingUpdate** | Reemplaza versiones de a poco, sin downtime             |
+| **Recreate**     | Borra lo anterior antes de levantar lo nuevo (riesgoso) |
+| **Readiness Probe** | Dice si el pod está listo para recibir tráfico         |
+| **Liveness Probe**  | Dice si el pod sigue vivo, reinicia si no responde    |
 
-# Verificá que esté OK
-helm version
+---
+
+## 📦 Paso 1: Agregar Probes en `deployment.yaml`
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mi-app
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: mi-app
+  template:
+    metadata:
+      labels:
+        app: mi-app
+    spec:
+      containers:
+        - name: web
+          image: ghcr.io/tu-usuario/mi-app:latest
+          ports:
+            - containerPort: 3000
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 15
+            periodSeconds: 20
 ````
 
 ---
 
-## 📦 Paso 2: Usar tu primer Chart
+## 🔁 Paso 2: Aplicar y monitorear el rollout
 
 ```bash
-helm repo add bitnami https://charts.bitnami.com/bitnami
-helm repo update
+kubectl apply -f k8s/deployment.yaml
+kubectl rollout status deployment/mi-app
+```
 
-# Instalar Redis en tu clúster:
-helm install mi-redis bitnami/redis
+---
 
-# Ver qué se instaló
-helm list
+## 🔙 Paso 3: Simular error + rollback
+
+1. Cambiá la imagen en el YAML a una versión rota (`imagen: algoinexistente`)
+2. Aplicá el cambio:
+
+```bash
+kubectl apply -f k8s/deployment.yaml
+```
+
+3. Kubernetes detecta el fallo → el pod nunca queda listo → rollback automático
+
+```bash
+kubectl rollout undo deployment/mi-app
+```
+
+---
+
+## 👀 Paso 4: Ver logs, eventos y estado
+
+```bash
 kubectl get pods
-```
-
----
-
-## 📂 Paso 3: Crear tu propio Helm Chart
-
-```bash
-helm create roxs-chart
-```
-
-Esto genera:
-
-```
-roxs-chart/
-├── charts/
-├── templates/
-│   ├── deployment.yaml
-│   ├── service.yaml
-│   └── ...
-├── values.yaml
-└── Chart.yaml
-```
-
-🎯 Este chart podés adaptarlo a tu aplicación.
-
----
-
-## ✍️ Paso 4: Personalizar `values.yaml`
-
-```yaml
-replicaCount: 2
-
-image:
-  repository: ghcr.io/tu-usuario/mi-app
-  tag: latest
-  pullPolicy: IfNotPresent
-
-service:
-  type: ClusterIP
-  port: 3000
-```
-
-📌 Luego, usás esos valores en los `templates/*.yaml` con la sintaxis `{{ .Values.image.repository }}`.
-
----
-
-## 🚀 Paso 5: Desplegar tu chart
-
-```bash
-helm install mi-app ./roxs-chart
-kubectl get all
-```
-
-¿Hiciste cambios? Actualizá con:
-
-```bash
-helm upgrade mi-app ./roxs-chart
+kubectl describe deployment mi-app
+kubectl logs deployment/mi-app
 ```
 
 ---
 
 ## 🧪 Tarea del Día
 
-1. Instalar Helm en tu máquina
-2. Probar instalar un chart público (ej: Redis)
-3. Crear tu propio chart con `helm create`
-4. Adaptarlo a tu aplicación y desplegarlo
+1. Aplicar un deployment con `RollingUpdate`
+2. Agregar `readiness` y `liveness` probes
+3. Simular un fallo para probar rollback
+4. Observar eventos y salida de logs
 
-🎁 Bonus: Aplicar variables y flags en `values.yaml`
-📸 Compartí tu primer chart con **#DevOpsConRoxs - Día 38**
+🎁 Bonus: Automatizar rollback en un script
+📸 Mostrá tu probe funcionando con **#DevOpsConRoxs - Día 37**
 
 ---
 
 ## 🧠 Revisión rápida
 
-| Pregunta                                                    | ✔️ / ❌ |
-| ----------------------------------------------------------- | ------ |
-| ¿Qué es un Helm Chart?                                      |        |
-| ¿Dónde se definen los valores?                              |        |
-| ¿Cómo actualizás una app con Helm?                          |        |
-| ¿Qué ventaja tiene respecto a usar `kubectl apply` directo? |        |
+| Pregunta                                        | ✔️ / ❌ |
+| ----------------------------------------------- | ------ |
+| ¿Qué diferencia hay entre readiness y liveness? |        |
+| ¿Qué estrategia de despliegue usaste?           |        |
+| ¿Cómo sabés si un deployment está fallando?     |        |
+| ¿Podés volver atrás a una versión anterior?     |        |
 
 ---
 
-## 🎩 Cierre del Día
+## 🔥 Cierre del Día
 
-Hoy sumaste una herramienta mágica a tu toolbox: **Helm**.
-A partir de ahora, tus despliegues son más limpios, reusables y versionables.
+Hoy aprendiste a hacer despliegues profesionales, cuidando la estabilidad de tu aplicación.
+¡Tu cluster ahora detecta errores y se cura solo! 💊☸️
 
-Mañana vas a llevar esto un paso más allá: ¡**templatear tus valores y publicar tu chart como pro!** 🧙‍♂️
+Mañana seguimos con herramientas que facilitan el despliegue en Kubernetes: **Helm** entra en escena. 🎩
 
-Nos vemos en el **Día 39** 🔮
-
-
+Nos vemos en el **Día 39** 🚀

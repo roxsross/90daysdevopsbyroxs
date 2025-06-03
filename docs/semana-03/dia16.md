@@ -34,7 +34,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return jsonify({
-        'message': '¡Hola DevOps con Rox!',
+        'message': '¡Hola DevOps con Roxs!',
         'timestamp': datetime.datetime.now().isoformat(),
         'status': 'success'
     })
