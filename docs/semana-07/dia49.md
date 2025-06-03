@@ -1,5 +1,5 @@
 ---
-title: Día 49 - Hardening del Voting-App
+title: Día 49 -  Desafío Final Semana 7
 description: Aplicá todo lo aprendido para asegurar tu aplicación como una pro
 sidebar_position: 7
 ---
