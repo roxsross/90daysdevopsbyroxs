@@ -23,6 +23,8 @@ Este repositorio incluye una aplicación distribuida compuesta por tres servicio
 2. **Worker**: Un servicio **Node.js** que consume los votos desde **Redis** y los guarda en **PostgreSQL**.
 3. **Result**: Una app en **Node.js** que muestra los resultados en tiempo real usando **WebSockets**.
 
+![](../static/images/6.png)
+
 Esta aplicación será tu base para practicar y aplicar los conceptos que irás aprendiendo. Trabajarás en todos los aspectos de esta app, desde su **dockerización**, **orquestación con Kubernetes**, hasta su **monitoreo con Prometheus y Grafana**.
 
 ---
