@@ -76,7 +76,7 @@ const config = {
         logo: {
           alt: 'DevOps',
           src: 'img/295.png',
-          href: 'https://roxs.295devops.con',
+          href: 'https://roxs.295devops.com',
         },
         style: 'light',
         copyright: `Copyright © ${new Date().getFullYear()} Rossana Suarez @roxsross`,
