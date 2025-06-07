@@ -104,7 +104,7 @@ cd git-exercises
 
 **Bonus:** Configurar upstream para sincronizar actualizaciones:
 ```bash
-git remote add upstream https://github.com/sd031/git-exercises.git
+git remote add upstream https://github.com/roxsross/git-exercises.git
 git remote -v
 ```
 
