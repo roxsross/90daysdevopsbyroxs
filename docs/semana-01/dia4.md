@@ -1,391 +1,894 @@
 ---
-title: Día 4 - Automatizando Tareas con Bash Scripting I
-description: Automatizando
+title: Día 4 - Git & GitHub - Basics, Branching, Merging, PRs
+description: Dominando Git y GitHub para control de versiones y colaboración
 sidebar_position: 4
 ---
 
-# ⚙️ Automatizando Tareas con Bash Scripting I
+## ⚙️ Git & GitHub - Basics, Branching, Merging, PRs
 
 ![](../../static/images/banner/1.png)
 
-Hoy vas a descubrir cómo usar **Bash scripting** para automatizar tareas en Linux. Desde chequeos básicos hasta reiniciar servicios automáticamente, ¡vas a empezar a pensar como un verdadero DevOps!
 
----
+**¡Hola! Es el Día 4 de tu jornada DevOps 👋**
 
-## 💻 ¿Dónde practicar?
+El control de versiones es la columna vertebral del desarrollo moderno, y Git se destaca como el favorito de la industria. Dominar Git te permitirá rastrear cambios, colaborar eficientemente y optimizar tus flujos de trabajo DevOps.
 
-Podés seguir esta clase usando:
+## 📚 Puntos de Aprendizaje
 
-- Tu propia terminal si tenés **Linux o macOS**
-- **WSL** o **Git Bash** en **Windows**
-- Un entorno virtual con **Vagrant** (como viste en el Día 3)
-- O incluso 100% online con:
-  - [Killercoda](https://killercoda.com/)
+### Conceptos Fundamentales
+- **¿Qué es el Control de Versiones?** - Por qué Git es el VCS más popular
+- **Git vs. Otros VCS** - Diferencias con SVN, Mercurial
+- **Repositorios, Commits y Branches** - Cómo Git rastrea los cambios
+- **Estados de Git** - Directorio de trabajo, área de staging, e historial de commits
 
+### Comandos Básicos de Git
+- `git init`, `git add`, `git commit`
+- `git status`, `git log`, `git diff`
 
----
+### Branching y Merging
+- Creación de branches y fusión de cambios
+- Estrategias de branching
 
-## 🧠 Fundamentos de Bash: Scripts y Condicionales
+### Colaboración
+- **Pull Requests (PRs)** - Entendiendo los flujos de GitHub
+- **Repositorios Remotos** - Conectando Git local con GitHub
+- **Clonado, fetching, pulling y pushing** - Sincronización de cambios
+- **Resolución de Conflictos** - Cómo manejar y solucionar conflictos
 
-Antes de empezar con los scripts más útiles, veamos cómo funciona un script básico en Bash.
+## 🎓 Recursos de Aprendizaje
 
-### 📄 ¿Qué es un script Bash?
+- [Atlassian Git Tutorial](https://www.atlassian.com/git/tutorials)
+- [Pro Git (Capítulo 2 - Uso Básico)](https://git-scm.com/book)
+- [GitHub's Hello World Guide](https://guides.github.com/activities/hello-world/)
 
-Es un archivo de texto con instrucciones que ejecutás en una terminal Linux, como si las escribieras vos misma.
+## ✅ Tareas Iniciales
 
-Ejemplo mínimo:
+### 1. Instalación y Configuración
 ```bash
-#!/bin/bash
-echo "Hola Roxs DevOps!"
-````
+# Instalar Git en tu sistema
+# Visita: https://git-scm.com/downloads
 
-📌 Guardalo como `hola.sh`, dale permisos y ejecutalo:
-
-```bash
-chmod +x hola.sh
-./hola.sh
+# Configurar tu nombre de usuario y email
+git config --global user.name "Tu Nombre"
+git config --global user.email "tu@email.com"
 ```
 
----
+### 2. Crear tu Primer Repositorio
+```bash
+# Crear nueva carpeta e inicializar repositorio Git
+mkdir git-proyecto && cd git-proyecto
+git init
 
-### 🔁 Estructura básica de un script
+# Crear archivos iniciales
+touch index.html style.css
+git add .
+git commit -m "Commit inicial"
+```
+
+### 3. Realizar Cambios y Commit
+```bash
+# Modificar index.html y verificar cambios
+git status
+git diff
+git add index.html
+git commit -m "Actualizado index.html"
+```
+
+### 4. Verificar Historial
+```bash
+# Verificar historial de commits
+git log --oneline
+```
+
+### 5. Conectar con GitHub
+```bash
+# Crear repositorio en GitHub, agregar remoto y push
+git remote add origin https://github.com/tuusuario/git-proyecto.git
+git branch -M main
+git push -u origin main
+```
+
+## 🔥 Desafíos Prácticos
+
+### 🔹 Desafío 1: Fork y Clone
+**Objetivo:** Fork y clona un proyecto open-source
+
+**Pasos:**
+1. Dirígete al repositorio: [git exercises](https://github.com/roxsross/git-exercises)
+2. Haz Fork del repositorio (botón "Fork" en la esquina superior derecha)
+3. Clona tu fork:
+```bash
+git clone https://github.com/TU_USUARIO/git-exercises.git
+cd git-exercises
+```
+
+**Bonus:** Configurar upstream para sincronizar actualizaciones:
+```bash
+git remote add upstream https://github.com/sd031/git-exercises.git
+git remote -v
+```
+
+### 🔹 Desafío 2: Branching
+**Objetivo:** Crear una nueva branch, cambiar y hacer commit
 
 ```bash
+# Crear y cambiar a nueva branch
+git checkout -b feature-branch
+
+# Verificar branch activa
+git branch
+
+# Hacer cambios
+echo "Nueva funcionalidad agregada!" > feature.txt
+git add feature.txt
+git commit -m "Agregado feature.txt con nueva funcionalidad"
+
+# Push de la nueva branch
+git push origin feature-branch
+```
+
+### 🔹 Desafío 3: Merging
+**Objetivo:** Fusionar feature-branch en main
+
+```bash
+# Cambiar a main
+git checkout main
+
+# Asegurar que main esté actualizado
+git pull origin main
+
+# Fusionar feature-branch
+git merge feature-branch
+
+# Push de los cambios fusionados
+git push origin main
+
+# Eliminar branch (opcional)
+git branch -d feature-branch
+git push origin --delete feature-branch
+```
+
+### 🔹 Desafío 4: Deshacer Commits
+**Objetivo:** Usar git reset o git revert para deshacer un commit
+
+**Opción A - git reset (elimina completamente):**
+```bash
+# Eliminar último commit pero mantener cambios
+git reset --soft HEAD~1
+
+# Eliminar último commit y descartar cambios
+git reset --hard HEAD~1
+```
+
+**Opción B - git revert (mantiene historial):**
+```bash
+# Ver historial y obtener hash del commit
+git log --oneline
+
+# Revertir commit específico
+git revert <commit-hash>
+```
+
+### 🔹 Desafío 5: Rebase
+**Objetivo:** Rebase feature-branch sobre main
+
+```bash
+# Cambiar a feature-branch
+git checkout feature-branch
+
+# Rebase sobre main
+git rebase main
+
+# Resolver conflictos si aparecen:
+# 1. Editar archivos conflictivos
+# 2. git add <archivo-resuelto>
+# 3. git rebase --continue
+```
+
+**Diferencia Rebase vs Merge:**
+- **Rebase:** Crea historial lineal y limpio
+- **Merge:** Mantiene historial de ramificación
+
+### 🔹 Desafío 6: Pull Request
+**Objetivo:** Crear un PR en GitHub desde feature branch
+
+**Pasos:**
+1. Push de tu feature branch: `git push origin feature-branch`
+2. Ve a GitHub y haz clic en "Compare & pull request"
+3. Completa título y descripción
+4. Crear Pull Request
+5. Una vez aprobado, hacer merge
+
+**Bonus con GitHub CLI:**
+```bash
+gh pr create --base main --head feature-branch --title "Nueva Funcionalidad" --body "Descripción de la funcionalidad"
+```
+
+### 🔹 Desafío 7: Resolución de Conflictos
+**Objetivo:** Crear cambios conflictivos y resolverlos
+
+```bash
+# Crear repositorio de prueba
+git init conflict-demo
+cd conflict-demo
+echo "¡Hola, DevOps!" > archivo.txt
+git add archivo.txt
+git commit -m "Commit inicial"
+
+# Crear y modificar feature-branch
+git checkout -b feature-branch
+echo "Cambio en feature branch" > archivo.txt
+git add archivo.txt
+git commit -m "Modificado archivo.txt en feature-branch"
+
+# Volver a main y hacer cambio conflictivo
+git checkout main
+echo "Cambio en main branch" > archivo.txt
+git add archivo.txt
+git commit -m "Modificado archivo.txt en main"
+
+# Intentar merge (generará conflicto)
+git merge feature-branch
+
+# Resolver conflicto manualmente en archivo.txt
+# Eliminar marcadores de conflicto y elegir contenido
+git add archivo.txt
+git commit -m "Resuelto conflicto de merge en archivo.txt"
+```
+
+### 🔹 Desafío 8: Git Stash
+**Objetivo:** Guardar y restaurar cambios no commiteados
+
+```bash
+# Hacer cambios sin commit
+echo "Cambios no commiteados" >> archivo.txt
+
+# Verificar estado
+git status
+
+# Guardar cambios temporalmente
+git stash
+
+# Verificar que working directory está limpio
+git status
+
+# Restaurar cambios
+git stash pop
+
+# Listar todos los stashes
+git stash list
+
+# Aplicar stash específico
+git stash apply stash@{0}
+```
+
+### 🔹 Desafío 9: Tags de Versión
+**Objetivo:** Agregar tags de versión a commits
+
+```bash
+# Ver historial reciente
+git log --oneline --graph --decorate -n 5
+
+# Crear tag ligero
+git tag v1.0.0
+
+# Crear tag anotado (recomendado)
+git tag -a v1.0.0 -m "Release versión 1.0.0"
+
+# Listar tags
+git tag
+
+# Push del tag
+git push origin v1.0.0
+
+# Push de todos los tags
+git push --tags
+
+# Ver detalles del tag
+git show v1.0.0
+```
+
+### 🔹 Desafío 10: Editar Commits Pasados
+**Objetivo:** Usar git commit --amend y git rebase -i
+
+**Modificar último commit:**
+```bash
+# Hacer cambios adicionales
+echo "Cambio adicional" >> archivo.txt
+git add archivo.txt
+
+# Modificar último commit
+git commit --amend -m "Commit actualizado con nuevos cambios"
+
+# Force push si ya fue pusheado
+git push origin main --force
+```
+
+**Editar commits anteriores:**
+```bash
+# Ver historial
+git log --oneline -n 5
+
+# Iniciar rebase interactivo (últimos 3 commits)
+git rebase -i HEAD~3
+
+# En el editor, cambiar 'pick' por:
+# - reword: cambiar mensaje del commit
+# - edit: pausar para modificar commit
+# - squash: combinar commits
+# - drop: eliminar commit
+```
+
+## 💡 Bonus: Estructura del .git
+
+```
+📂 .git/
+├── 📁 hooks/          # Scripts de automatización
+├── 📁 objects/        # Almacena todos los objetos Git
+├── 📁 refs/           # Referencias a commits
+│   ├── 📁 heads/      # Branches locales
+│   └── 📁 remotes/    # Branches remotas
+├── 📄 config          # Configuración del repositorio
+├── 📄 HEAD            # Apunta a la branch actual
+└── 📄 index           # Área de staging
+```
+
+
+--- 
+
+# 🚀 Git Avanzado - Rebase, Cherry-pick, Resolución de Conflictos
+
+
+Cuando trabajas en un entorno de equipo con otros ingenieros, los conflictos están destinados a ocurrir. Hoy aprenderemos técnicas avanzadas de Git: rebase, cherry-pick y resolución profesional de conflictos.
+
+## 📚 Puntos de Aprendizaje
+
+### Técnicas Avanzadas
+- **🔹 Git Rebase** - Deep Dive y reescritura de historial
+- **🔹 Git Cherry-pick** - Aplicar commits específicos entre branches
+- **🔹 Resolución de Conflictos** - Identificar y resolver conflictos eficientemente
+- **🔹 Reescritura de Historial** - Casos de uso avanzados
+- **🔹 Amending Commits** - Modificar commits sin cambiar historial
+- **🔹 Git Hooks** - Automatización con pre-commit y post-commit hooks
+
+## 🎓 Recursos de Aprendizaje
+
+- [Git Rebase Guide - Atlassian](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase)
+- [Git Cherry-pick - Documentación Oficial](https://git-scm.com/docs/git-cherry-pick)
+- [Understanding Merge Conflicts - Atlassian](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
+- [Git Hooks Guide](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
+
+## ✅ Tareas Iniciales
+
+### 1. Configurar Repositorio de Práctica
+```bash
+# Usar repositorio existente o crear uno nuevo
+git init git-avanzado-practica
+cd git-avanzado-practica
+```
+
+### 2. Crear Branch de Práctica
+```bash
+# Crear nueva branch para practicar comandos avanzados
+git checkout -b advanced-git-practice
+
+# Hacer múltiples commits
+echo "Contenido inicial" > archivo.txt
+git add archivo.txt
+git commit -m "Commit inicial"
+
+echo "Segunda línea" >> archivo.txt
+git commit -am "Segundo commit"
+
+echo "Tercera línea" >> archivo.txt
+git commit -am "Tercer commit"
+```
+
+### 3. Push al Repositorio Remoto
+```bash
+git push origin advanced-git-practice
+```
+
+### 4. Simular Flujo Colaborativo
+```bash
+# Crear segunda branch
+git checkout -b feature-x
+echo "Funcionalidad X" >> feature-x.txt
+git add feature-x.txt
+git commit -m "Agregada funcionalidad X"
+
+# Merge a main
+git checkout main
+git merge feature-x
+```
+
+### 5. Crear Conflicto Intencional
+```bash
+# Crear dos branches con cambios conflictivos
+git checkout -b branch-a
+echo "Cambio desde branch A" > conflicto.txt
+git add conflicto.txt
+git commit -m "Cambio en branch A"
+
+git checkout main
+git checkout -b branch-b
+echo "Cambio desde branch B" > conflicto.txt
+git add conflicto.txt
+git commit -m "Cambio en branch B"
+
+# Intentar merge (generará conflicto)
+git checkout main
+git merge branch-a
+git merge branch-b  # Esto generará conflicto
+```
+
+### 6. Visualizar Historial
+```bash
+# Visualizar estructura de commits y branches
+git log --oneline --graph --all
+```
+
+## 🔥 Desafíos Avanzados
+
+### 🔹 Desafío 1: Rebase Interactivo
+**Objetivo:** Modificar historial de commits (renombrar, squash, reordenar)
+
+**Paso 1: Ver Commits Recientes**
+```bash
+git log --oneline -n 5
+```
+
+**Ejemplo de output:**
+```
+a1b2c3d (HEAD -> feature-branch) Agregada nueva funcionalidad
+e4f5g6h Corregido issue de API
+i7j8k9l Actualizada documentación
+m0n1o2p Commit inicial
+```
+
+**Paso 2: Iniciar Rebase Interactivo**
+```bash
+git rebase -i HEAD~3
+```
+
+**Paso 3: Modificar Commits en el Editor**
+
+**1️⃣ Renombrar Mensaje de Commit:**
+```
+reword a1b2c3d Agregada nueva funcionalidad
+pick e4f5g6h Corregido issue de API
+pick i7j8k9l Actualizada documentación
+```
+
+**2️⃣ Squash Commits:**
+```
+pick a1b2c3d Agregada nueva funcionalidad
+pick e4f5g6h Corregido issue de API
+squash i7j8k9l Actualizada documentación
+```
+
+**3️⃣ Reordenar Commits:**
+```
+pick e4f5g6h Corregido issue de API
+pick i7j8k9l Actualizada documentación
+pick a1b2c3d Agregada nueva funcionalidad
+```
+
+**Paso 4: Finalizar y Push**
+```bash
+git rebase --continue
+git push origin feature-branch --force
+```
+
+### 🔹 Desafío 2: Cherry-pick
+**Objetivo:** Aplicar commit específico de otra branch
+
+**Paso 1: Ver Commits Disponibles**
+```bash
+git checkout feature-branch
+git log --oneline --graph -n 5
+```
+
+**Paso 2: Cambiar a Branch Objetivo**
+```bash
+git checkout main
+```
+
+**Paso 3: Aplicar Commit Específico**
+```bash
+git cherry-pick e4f5g6h
+```
+
+**Paso 4: Resolver Conflictos (si aparecen)**
+```bash
+# Editar archivos conflictivos manualmente
+git add <archivo-resuelto>
+git cherry-pick --continue
+
+# Para abortar:
+git cherry-pick --abort
+```
+
+**Paso 5: Push de Cambios**
+```bash
+git push origin main
+```
+
+### 🔹 Desafío 3: Escenario de Conflicto de Merge
+**Objetivo:** Crear y resolver conflictos usando merge y rebase
+
+**Paso 1: Setup del Repositorio**
+```bash
+git init merge-conflict-demo
+cd merge-conflict-demo
+echo "Línea 1" > conflicto.txt
+git add conflicto.txt
+git commit -m "Commit inicial"
+```
+
+**Paso 2: Branch de Funcionalidad**
+```bash
+git checkout -b feature-branch
+echo "Cambio desde feature branch" > conflicto.txt
+git commit -am "Modificado conflicto.txt en feature-branch"
+```
+
+**Paso 3: Cambio en Main**
+```bash
+git checkout main
+echo "Cambio desde main branch" > conflicto.txt
+git commit -am "Modificado conflicto.txt en main"
+```
+
+**Paso 4: Merge y Resolución**
+```bash
+# Intentar merge
+git merge feature-branch
+
+# Resolver conflicto manualmente en conflicto.txt
+# Eliminar marcadores: <<<<<<< ======= >>>>>>>
+# Elegir o combinar contenido deseado
+
+git add conflicto.txt
+git commit -m "Resuelto conflicto de merge"
+```
+
+**Paso 5: Método Alternativo con Rebase**
+```bash
+git checkout main
+git reset --hard HEAD~1  # Deshacer merge
+git checkout feature-branch
+git rebase main
+
+# Resolver conflicto:
+git add conflicto.txt
+git rebase --continue
+```
+
+### 🔹 Desafío 4: Deshacer Commits
+**Objetivo:** Usar git reset y git revert - entender diferencias
+
+**Setup Inicial:**
+```bash
+git init undo-demo
+cd undo-demo
+
+echo "Primer commit" > archivo.txt
+git add archivo.txt
+git commit -m "Primer commit"
+
+echo "Segundo commit" >> archivo.txt
+git commit -am "Segundo commit"
+
+echo "Tercer commit" >> archivo.txt
+git commit -am "Tercer commit"
+
+git log --oneline -n 3
+```
+
+**Opción 1: Usando reset**
+```bash
+# 1️⃣ Soft Reset (mantiene cambios en staging)
+git reset --soft HEAD~1
+
+# 2️⃣ Mixed Reset (mantiene cambios en working directory)
+git reset --mixed HEAD~1
+
+# 3️⃣ Hard Reset (elimina todos los cambios)
+git reset --hard HEAD~1
+```
+
+**Opción 2: Usando revert**
+```bash
+# Crea nuevo commit que deshace cambios
+git revert HEAD
+```
+
+**Diferencias Clave:**
+- **reset:** Reescribe historial (peligroso si ya se pusheó)
+- **revert:** Mantiene historial, crea commit inverso (seguro)
+
+### 🔹 Desafío 5: Amend de Commits
+**Objetivo:** Modificar último commit sin cambiar historial
+
+**Paso 1: Verificar Último Commit**
+```bash
+git log --oneline -n 1
+```
+
+**Paso 2: Corregir Mensaje de Commit**
+```bash
+git commit --amend -m "Mensaje de commit actualizado"
+```
+
+**Paso 3: Agregar Archivo Olvidado**
+```bash
+echo "Contenido nuevo" > olvidado.txt
+git add olvidado.txt
+git commit --amend --no-edit
+```
+
+**Paso 4: Push de Cambios**
+```bash
+git push origin main --force
+```
+
+### 🔹 Desafío 6: Git Hooks
+**Objetivo:** Configurar hooks para automatizar verificaciones
+
+**Paso 1: Navegar a Hooks**
+```bash
+cd .git/hooks
+```
+
+**Paso 2: Crear Pre-Commit Hook**
+```bash
+nano pre-commit
+```
+
+**Contenido del hook:**
+```bash
 #!/bin/bash
-
-# Comentario
-echo "Hola Mundo"
-
-# Variables
-NOMBRE="Roxs"
-echo "Hola $NOMBRE"
-
-# Condicionales
-if [ "$NOMBRE" == "Roxs" ]; then
-    echo "¡Sos vos!"
-else
-    echo "¿Y vos quién sos?"
+# Verificar espacios en blanco al final
+if git diff --cached --check | grep -q "trailing whitespace"; then
+  echo "❌ Commit rechazado: ¡Espacios en blanco detectados!"
+  exit 1
 fi
 
-# Bucle
-for i in {1..3}; do
-    echo "Iteración $i"
+# Verificar sintaxis de archivos Python (si existen)
+for file in $(git diff --cached --name-only --diff-filter=ACM | grep '\.py$'); do
+  python -m py_compile "$file"
+  if [ $? -ne 0 ]; then
+    echo "❌ Error de sintaxis en $file"
+    exit 1
+  fi
 done
+
+echo "✅ Verificaciones pre-commit pasadas!"
+exit 0
 ```
 
----
-
-### ✅ Condicionales comunes en Bash
-
-| Estructura         | Explicación                       |
-| ------------------ | --------------------------------- |
-| `if ...; then ...` | Ejecuta si se cumple la condición |
-| `else`             | Ejecuta si **no** se cumple       |
-| `elif`             | Evalúa una condición alternativa  |
-| `[ "$a" == "$b" ]` | Compara cadenas                   |
-| `[ $a -gt 5 ]`     | Mayor que (números)               |
-| `[ -f archivo ]`   | ¿Existe el archivo?               |
-| `[ -d carpeta ]`   | ¿Existe el directorio?            |
-
----
-
-### 🔃 Bucles útiles
-
-**Bucle `for`**
-
+**Paso 3: Hacer Ejecutable**
 ```bash
-for i in {1..5}; do
-  echo "Número: $i"
-done
+chmod +x pre-commit
 ```
 
-**Bucle `while`**
-
+**Paso 4: Probar el Hook**
 ```bash
-contador=1
-while [ $contador -le 3 ]; do
-  echo "Contador: $contador"
-  ((contador++))
-done
+echo "Hola mundo!   " >> archivo.txt  # Espacios al final
+git add archivo.txt
+git commit -m "Commit de prueba"  # Debería fallar
 ```
 
----
+**Paso 5: Post-Commit Hook (Opcional)**
+```bash
+nano post-commit
+```
 
-### 🧪 Buenas prácticas
-
-* Usá `#!/bin/bash` siempre en la primera línea
-* Usá `set -e` para salir si ocurre un error
-* Comentá tu código con `#`
-* Probá scripts en entornos controlados (como Vagrant o online)
-
----
-
-## Calentenemos motores
-
-
-## 🐣 Primeros Pasos con Bash
-
-Estos scripts te ayudarán a practicar los fundamentos de Bash antes de automatizar tareas más complejas.
-
----
-
-### ✅ Script 1: ¡Hola Roxs!
-
+**Contenido:**
 ```bash
 #!/bin/bash
-echo "Hola Roxs DevOps!"
+echo "✅ Commit exitoso! Hash: $(git rev-parse HEAD)"
+echo "📊 Estadísticas del repositorio:"
+echo "   - Total commits: $(git rev-list --count HEAD)"
+echo "   - Archivos modificados: $(git diff --name-only HEAD~1)"
 ```
 
-💡 Este es tu primer script. Guardalo como `hola.sh`, hacelo ejecutable con `chmod +x hola.sh` y corrélo con `./hola.sh`.
-
----
-
-### 📦 Script 2: Variables y Saludos
-
+**Hacer ejecutable:**
 ```bash
-#!/bin/bash
-NOMBRE="Roxs"
-echo "Hola $NOMBRE, bienvenida al mundo DevOps"
+chmod +x post-commit
 ```
 
-📌 Las variables en Bash no usan `let`, ni `var`. Solo asignás con `=` y sin espacios.
-
----
-
-### ❓ Script 3: Preguntar al usuario
-
+**Bonus: Compartir Hooks**
 ```bash
-#!/bin/bash
-echo "¿Cómo te llamás?"
-read NOMBRE
-echo "¡Hola $NOMBRE!"
+# Crear directorio de hooks compartidos
+mkdir -p .githooks
+mv .git/hooks/pre-commit .githooks/
+git config core.hooksPath .githooks
+git add .githooks/
+git commit -m "Agregados hooks compartidos"
 ```
 
-📌 Usamos `read` para capturar input del usuario. Guardalo como `pregunta.sh`.
+### 🔹 Desafío 7: Rebase de Feature Branch
+**Objetivo:** Rebase feature branch sobre main sin merge commits
 
----
-
-### 🔁 Script 4: Condicional simple
-
+**Paso 1: Checkout a Feature Branch**
 ```bash
-#!/bin/bash
-read -p "¿Tenés sed? (sí/no): " RESPUESTA
-
-if [ "$RESPUESTA" == "sí" ]; then
-  echo "Andá por un cafecito ☕"
-else
-  echo "Seguimos con DevOps 🚀"
-fi
+git checkout feature-branch
 ```
 
-💡 Usamos `if`, `then`, `else` y `fi` para crear condiciones.
-
----
-
-### 🔂 Script 5: Bucle `for` para repetir tareas
-
+**Paso 2: Actualizar Main**
 ```bash
-#!/bin/bash
-for i in {1..5}; do
-  echo "DevOps es 🔥 - iteración $i"
-done
+git fetch origin
+git checkout main
+git pull origin main
 ```
 
----
-
-### 🕵️ Script 6: Detectar si un archivo existe
-
+**Paso 3: Rebase Feature Branch**
 ```bash
-#!/bin/bash
-ARCHIVO="config.txt"
-
-if [ -f "$ARCHIVO" ]; then
-  echo "El archivo $ARCHIVO existe"
-else
-  echo "No encontré el archivo $ARCHIVO"
-fi
+git checkout feature-branch
+git rebase main
 ```
 
-💡 Muy útil para evitar errores al trabajar con archivos o scripts dependientes.
-
----
-
-## 🧪 Sugerencia extra para practicar
-
-Creá un script llamado `mi_status.sh` que muestre:
-
-* El nombre del usuario actual
-* El directorio en el que estás
-* La fecha y hora actual
-
+**Paso 4: Resolver Conflictos**
 ```bash
-#!/bin/bash
-echo "Usuario: $(whoami)"
-echo "Directorio actual: $(pwd)"
-echo "Fecha: $(date)"
+# Si aparecen conflictos:
+git add <archivo-resuelto>
+git rebase --continue
+
+# Para abortar:
+git rebase --abort
 ```
 
----
-
-> Si trabajas en DevOps o como administrador de sistemas, automatizar tareas rutinarias es esencial.
----
-
-
-## 📁 Script 1: Monitoreo de Uso de Disco y Alertas 🚨
-
-Problema: ¿Alguna vez se te llenó la partición raíz (/) sin aviso? Este script verifica:
-Si la partición `/` está al 90% o si `/home` supera los 2GB.
-
+**Paso 5: Push de Cambios**
 ```bash
-#!/bin/bash
-ADMIN="admin@ejemplo.com"
-USO_RAIZ=$(df / | grep / | awk '{print $5}' | sed 's/%//g')
-TAMANO_HOME=$(du -sh /home | awk '{print $1}' | sed 's/G//g')
-
-if [ "$USO_RAIZ" -ge 90 ]; then
-    echo "¡Alerta: Partición / al ${USO_RAIZ}%!" | mail -s "Alerta Partición /" $ADMIN
-fi
-
-if (( $(echo "$TAMANO_HOME > 2" | bc -l) )); then
-    echo "¡Alerta: /home ocupa ${TAMANO_HOME}GB!" | mail -s "Alerta Directorio /home" $ADMIN
-fi
+git push origin feature-branch --force
 ```
 
-📌 Programalo con cron para que corra cada hora:
+### 🔹 Desafío 8: Squash de Commits
+**Objetivo:** Combinar múltiples commits en uno solo
 
+**Paso 1: Crear Branch con Múltiples Commits**
 ```bash
-0 * * * * /ruta/monitor_disco.sh
+git checkout -b feature-squash
+
+echo "Primer cambio" > archivo.txt
+git add archivo.txt
+git commit -m "Primer commit"
+
+echo "Segundo cambio" >> archivo.txt
+git commit -am "Segundo commit"
+
+echo "Tercer cambio" >> archivo.txt
+git commit -am "Tercer commit"
 ```
 
----
-
-## 🔄 Script 2: Verificación y Reinicio de Servicios
-
-Problema: ¿Tu servidor web (apache/nginx) se cae y no te das cuenta? Este script lo verifica y reinicia automáticamente.
-
-Verifica si un servicio está caído y lo reinicia automáticamente.
-
+**Paso 2: Iniciar Rebase Interactivo**
 ```bash
-#!/bin/bash
-SERVICIO="apache2"
-
-if ! systemctl is-active --quiet $SERVICIO; then
-    systemctl start $SERVICIO
-    echo "El servicio $SERVICIO fue reiniciado." | mail -s "Reinicio de $SERVICIO" admin@ejemplo.com
-fi
+git rebase -i HEAD~3
 ```
 
-📌 Cron sugerido:
+**Paso 3: Configurar Squash**
+```
+pick abc1234 Primer commit
+squash def5678 Segundo commit
+squash ghi9012 Tercer commit
+```
 
+**Paso 4: Editar Mensaje Final**
+```
+Combinados todos los cambios de funcionalidad en un commit
+
+- Agregado primer cambio
+- Agregado segundo cambio  
+- Agregado tercer cambio
+```
+
+**Paso 5: Push y Verificar**
 ```bash
-* * * * * /ruta/monitor_servicio.sh
+git push origin feature-squash --force
+git log --oneline -n 3
 ```
 
----
+## 💡 Comandos de Rescate Git
 
-## 📊 Script 3: Monitoreo de Salud del Sistema
-
-Reporte en tiempo real de uso de memoria, disco y CPU:
-
+### Recuperar Commits Perdidos
 ```bash
-#!/bin/bash
-TIEMPO=$(date "+%Y-%m-%d %H:%M:%S")
-echo -e "Hora\t\t\tMemoria\t\tDisco (root)\tCPU"
-segundos="3600"
-fin=$((SECONDS+segundos))
+# Ver historial completo de referencias
+git reflog
 
-while [ $SECONDS -lt $fin ]; do
-    MEMORIA=$(free -m | awk 'NR==2{printf "%.f%%\t\t", $3*100/$2 }')
-    DISCO=$(df -h | awk '$NF=="/"{printf "%s\t\t", $5}')
-    CPU=$(top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{printf("%.f\n", 100 - $1)}')
-    echo -e "$TIEMPO\t$MEMORIA$DISCO$CPU"
-    sleep 3
-done
+# Recuperar commit específico
+git checkout <commit-hash>
+git checkout -b recovery-branch
+
+# Recuperar branch eliminada
+git checkout -b <branch-name> <commit-hash>
 ```
 
-📌 Podés guardar la salida en un archivo:
-
+### Debugging Avanzado
 ```bash
-./monitor.sh >> /var/log/salud_sistema.log
+# Encontrar cuándo se introdujo un bug
+git bisect start
+git bisect bad HEAD
+git bisect good <commit-hash>
+
+# Git automáticamente encuentra el commit problemático
 ```
 
+### Análisis de Repositorio
+```bash
+# Ver quién modificó cada línea
+git blame <archivo>
+
+# Buscar en todo el historial
+git log -S "búsqueda" --oneline
+
+# Estadísticas de contribuciones
+git shortlog -sn
+```
+
+## 🎯 Best Practices para Equipos
+
+### 1. **Estrategias de Branching**
+- **Feature branches:** Una feature por branch
+- **Git Flow:** main, develop, feature/, release/, hotfix/
+- **GitHub Flow:** main + feature branches con PR
+
+### 2. **Convenciones de Commits**
+```bash
+feat: agregar nueva funcionalidad
+fix: corregir bug
+docs: actualizar documentación
+style: cambios de formato
+refactor: refactorización de código
+test: agregar o modificar tests
+chore: tareas de mantenimiento
+```
+
+### 3. **Flujo de Trabajo Recomendado**
+```bash
+# 1. Actualizar main
+git checkout main
+git pull origin main
+
+# 2. Crear feature branch
+git checkout -b feature/nueva-funcionalidad
+
+# 3. Desarrollar y commitear
+git add .
+git commit -m "feat: implementar nueva funcionalidad"
+
+# 4. Rebase antes de PR
+git rebase main
+
+# 5. Push y crear PR
+git push origin feature/nueva-funcionalidad
+```
+
+## 🔧 Troubleshooting Común
+
+### Problemas y Soluciones
+```bash
+# Error: "Your branch is ahead of origin/main by X commits"
+git rebase origin/main
+
+# Error: "Merge conflict in file.txt"
+# 1. Abrir archivo, resolver marcadores
+# 2. git add archivo.txt
+# 3. git rebase --continue
+
+# Error: "Detached HEAD state"
+git checkout main
+git checkout -b new-branch <commit-hash>
+
+# Revertir todo a estado anterior
+git reflog
+git reset --hard HEAD@{n}
+```
+
+
+Estas técnicas avanzadas de Git te convertirán en un colaborador más eficiente y te prepararán para manejar repositorios complejos en entornos de producción.
+
 ---
 
-
-## 📚 Tareas Opcionales del Día 4
-
-> *Hoy diste tus primeros pasos con Bash. Ahora es momento de practicar de verdad.*
-> Elegí los desafíos que más te interesen... ¡o hacelos todos! 😉
-
----
-
-### 🧪 Nivel 1: Calentando motores
-
-1. ✅ **Crear un script llamado `presentacion.sh`** que pida tu nombre y edad, y devuelva:
-
-   ```bash
-   Hola Roxs, tenés 30 años. ¡Bienvenida al mundo Bash!
-   ```
-
-2. ✅ **Creá un script `multiplicar.sh`** que reciba dos números por argumento y muestre el resultado de la multiplicación.
-
-3. ✅ **Armá un bucle `for`** que muestre la tabla del 5.
-
----
-
-### 🧩 Nivel 2: Automatización útil
-
-4. 🛠 **Creá un script `backup_logs.sh`** que:
-
-   * Comprima el contenido de `/var/log`
-   * Lo guarde con timestamp en `/home/tu_usuario/backups/`
-   * Elimine backups de más de 7 días
-
-5. 🔍 **Creá `buscar_palabra.sh`** que:
-
-   * Reciba un nombre de archivo y una palabra como argumentos
-   * Busque si la palabra aparece en el archivo (con `grep`)
-   * Devuelva "¡Encontrado!" o "No encontrado."
-
----
-
-### 🔥 Nivel 3: Reto DevOps Pro
-
-6. 🚀 **Modificá `monitor_disco.sh`** para que guarde un historial en un archivo log, incluyendo la fecha.
-
-7. 🔁 **Creá un `servicio_status.sh`** que:
-
-   * Revise varios servicios (`nginx`, `mysql`, `docker`)
-   * Informe cuáles están activos y cuáles no
-   * Envíe un mail si alguno está caído (tip: usá un array y bucle)
-
-8. 📈 **Extendé el script de salud del sistema** para que:
-
-   * Corte el monitoreo si la CPU supera el 85% tres veces seguidas
-   * O guarde un log separado llamado `alertas_cpu.log`
-
----
-
-### 💬 Bonus creativo
-
-9. 🎤 **Hacé un script que sea un cuestionario loco**:
-
-   * Preguntá el nombre, edad y color favorito
-   * Mostrá un mensaje personalizado según lo que responda
-   * Usá `if`, `read`, y emojis en `echo` 💥
-
-10. 📸 **Subí tu favorito a redes**
-
-    * Captura de pantalla, gif o video corto
-    * Hashtag: **#BashConRoxs** o **#DevOpsConRoxs**
-
-### Material Extra
-
-Accede al Repositorio [Awesome Bash](https://github.com/awesome-lists/awesome-bash)
-
-Libro Recomendado [introduction-to-bash-scripting](https://github.com/bobbyiliev/introduction-to-bash-scripting)
-
-
-Accede al Repositorio github
-
-Usá el hashtag **#DevOpsConRoxs** o compartilo en el canal de la comunidad. 🎯
+**Próximo:** Día 5 - Automatizando Tareas con Bash Scripting 

@@ -341,7 +341,8 @@ chmod 755 mi_script.sh
 - `7 = 4 (r) + 2 (w) + 1 (x) = rwx`  
 - `5 = 4 (r) + 1 (x) = r-x`  
 
----
+
+--- 
 
 ### Cambiando la propiedad con `chown`  
 Si necesitas transferir la propiedad de un archivo o directorio, usa `chown` (*change owner*).  
@@ -830,6 +831,7 @@ document.write("Hora del servidor: " + new Date().toLocaleString());
   Explicalo con tus palabras.
 
 ---
+
 
 ### 📸 6. Bonus: Compartí tu terminal
 
