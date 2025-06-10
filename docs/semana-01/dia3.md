@@ -69,7 +69,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 Descargar instalador desde [virtualbox.org](https://www.virtualbox.org/)
 
 ### 2. Instalar Vagrant
-Descargar desde [vagrantup.com](https://www.virtualbox.org/) y ejecutar el .msi
+Descargar desde [vagrantup.com](https://www.vagrantup.com/) y ejecutar el .msi
 
 ### 3. Verificar instalación
 ```cmd
