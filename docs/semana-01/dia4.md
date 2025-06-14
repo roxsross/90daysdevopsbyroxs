@@ -208,6 +208,8 @@ gh pr create --base main --head feature-branch --title "Nueva Funcionalidad" --b
 **Objetivo:** Crear cambios conflictivos y resolverlos
 
 ```bash
+# Configurar rama main por defecto.
+git config --global init.defaultBranch main
 # Crear repositorio de prueba
 git init conflict-demo
 cd conflict-demo
