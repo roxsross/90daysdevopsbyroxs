@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -13,7 +13,7 @@ const config = {
   favicon: 'img/favicon.ico',
   url: 'https://roxs.295devops.com',
   baseUrl: '/',
-  organizationName: 'roxsross', 
+  organizationName: 'roxsross',
   projectName: '90devops-roxs',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -54,7 +54,7 @@ const config = {
             href: 'https://github.com/roxsross/roxs-devops-project90.git',
             label: 'GitHub',
             position: 'right',
-          }, 
+          },
           {
             href: 'https://twitter.com/roxsross',
             label: 'Twitter',
@@ -70,6 +70,11 @@ const config = {
             label: 'LinkedIn',
             position: 'right',
           },
+          {
+            href: 'https://discord.com/invite/RWQjCRaVJ3',
+            label: 'Discord',
+            position: 'right',
+          }
         ],
       },
       footer: {
