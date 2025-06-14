@@ -85,7 +85,7 @@ Si este proyecto te resulta útil o interesante, ¡no olvides dejarle una estrel
 
 - [Repositorio principal](https://github.com/roxsross/roxs-devops-project90)
 - [Material semanal del programa](https://90diasdedevops.com/) // Tira error "DNS_PROBE_FINISHED_NXDOMAIN", debería cambiarse para dirigir al plan de estudio tal vez?
-- [Comunidad en Discord](https://discord.gg/roxsross) // Dice invitación no válida, debería cambiarse
+- [Comunidad en Discord](https://discord.com/invite/RWQjCRaVJ3) // Dice invitación no válida, debería cambiarse
 - [Guía rápida de Docker Compose](https://docs.docker.com/compose/gettingstarted/)
 - [Documentación de Ansible](https://docs.ansible.com/)
 - [Terraform Provider Local](https://registry.terraform.io/providers/hashicorp/local/latest/docs)

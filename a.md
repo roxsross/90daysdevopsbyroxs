@@ -299,7 +299,7 @@ graph TB
 
 ### 💬 Únete a Nuestra Comunidad
 
-- **🎮 Discord**: [DevOps Bootcamp](https://discord.gg/devops-bootcamp) - Chat en tiempo real
+- **🎮 Discord**: [DevOps Bootcamp](https://discord.com/invite/RWQjCRaVJ3) - Chat en tiempo real
 - **💼 LinkedIn**: [Grupo DevOps Hispano](https://linkedin.com/groups/devops-hispano) - Networking profesional
 - **🐦 Twitter**: [@DevOpsConRoxs](https://twitter.com/DevOpsConRoxs) - Updates y tips
 - **📺 YouTube**: [Roxs DevOps Channel](https://youtube.com/c/roxsdevops) - Tutoriales y lives
@@ -425,7 +425,7 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 
 - **🐛 Issues**: [GitHub Issues](https://github.com/roxsross/90daysdevopsbyroxs/issues)
 - **💡 Feature Requests**: [GitHub Discussions](https://github.com/roxsross/90daysdevopsbyroxs/discussions)
-- **❓ Q&A**: [Discord #general](https://discord.gg/devops-bootcamp)
+- **❓ Q&A**: [Discord #general](https://discord.com/invite/RWQjCRaVJ3)
 - **📧 Email**: support@devops-bootcamp.com
 
 ---
@@ -448,7 +448,7 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 
 **"La mejor manera de predecir el futuro es construirlo"**
 
-[🚀 Comenzar Ahora](./semana-01-fundamentos/README.md) | [💬 Unirse a la Comunidad](https://discord.gg/devops-bootcamp) | [📺 Ver Videos](https://youtube.com/c/roxsdevops)
+[🚀 Comenzar Ahora](./semana-01-fundamentos/README.md) | [💬 Unirse a la Comunidad](https://discord.com/invite/RWQjCRaVJ3) | [📺 Ver Videos](https://youtube.com/c/roxsdevops)
 
 ---
 
