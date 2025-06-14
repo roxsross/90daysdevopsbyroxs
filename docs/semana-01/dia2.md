@@ -646,6 +646,7 @@ sudo nano index.html
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <title>¡DevOps en Acción!</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
