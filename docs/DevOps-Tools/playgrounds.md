@@ -55,7 +55,7 @@ Una plataforma de aprendizaje donde puedes dominar las habilidades del lado del 
 
 ![](https://pbs.twimg.com/media/GONqVP9W4AA8kW6?format=jpg&name=medium)
 
-Accede con este [link](https://labs.iximiuz.comd)
+Accede con este [link](https://labs.iximiuz.com)
 
 ## **Ventajas de los laboratorios prácticos gratuitos:**
 
