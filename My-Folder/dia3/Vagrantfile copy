@@ -1,0 +1,37 @@
+Vagrant.configure("2") do |config|
+  # Usa una imagen ligera de Ubuntu 22.04
+  config.vm.box = "bento/ubuntu-22.04"
+
+  # Configuración de red (accesible via IP)
+  config.vm.network "private_network", ip: "192.168.33.20"
+
+  # Provisionamiento con Shell embebido (instala Nginx)
+  config.vm.provision "shell", inline: <<-SHELL
+    echo "¡Hola desde el provisionamiento!" > /tmp/hola.txt
+    apt update && apt install -y nginx
+    systemctl start nginx
+  SHELL
+
+  # Provisionamiento con Shell usando script externo
+  config.vm.provision "shell", path: "scripts/instalar_nginx.sh"
+
+  # Instalar Docker y kubectl
+  config.vm.provision "shell", path: "scripts/instalar_docker.sh"
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
