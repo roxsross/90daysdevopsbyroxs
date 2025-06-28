@@ -820,6 +820,23 @@ Automatizar el despliegue de una app Node.js siguiendo estos pasos:
 5. Guardar la configuración de PM2 para reinicio automático.
 6. Registrar el proceso en un log `logs_pm2.txt`.
 
+---
+
+### 📦 Repositorio de la Aplicación 
+
+El código fuente de la aplicación Node.js para este desafío se encuentra en el siguiente repositorio (rama `ecommerce-ms`):
+
+- **Repositorio:** [https://github.com/roxsross/devops-static-web.git](https://github.com/roxsross/devops-static-web.git)
+- **Rama:** `ecommerce-ms`
+
+Cloná la rama específica con:
+
+```bash
+git clone -b ecommerce-ms https://github.com/roxsross/devops-static-web.git
+```
+
+---
+
 ### 🖼️ Resultados esperados
 
 ![](https://github.com/roxsross/devops-static-web/blob/ecommerce-ms/docs/1.png?raw=true)
