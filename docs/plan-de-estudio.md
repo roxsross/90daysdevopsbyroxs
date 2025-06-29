@@ -1,13 +1,168 @@
 ---
 sidebar_position: 2
 label: plan
-title: Plan de Estudio
-description: Semana a Semana
+title: 📍 Plan de Estudio
+description: Tu roadmap completo de transformación DevOps en 90 días
 ---
 
-![](../static/images/banner/14.png)
+<div style={{
+  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+  borderRadius: '20px',
+  padding: '3rem 2rem',
+  color: 'white',
+  textAlign: 'center',
+  marginBottom: '2rem',
+  position: 'relative',
+  overflow: 'hidden'
+}}>
+  <div style={{
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundImage: 'url("data:image/svg+xml,%3Csvg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23ffffff" fill-opacity="0.1" fill-rule="evenodd"%3E%3Ccircle cx="3" cy="3" r="3"/%3E%3Ccircle cx="13" cy="13" r="3"/%3E%3C/g%3E%3C/svg%3E")',
+    zIndex: 1
+  }}></div>
+  <div style={{ position: 'relative', zIndex: 2 }}>
+    <h1 style={{ fontSize: '2.5rem', margin: '0 0 1rem 0', textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>
+      📍 Tu Plan de Estudio DevOps
+    </h1>
+    <p style={{ fontSize: '1.2rem', margin: '0 0 2rem 0', maxWidth: '600px', marginLeft: 'auto', marginRight: 'auto' }}>
+      <strong>90 días. 11 semanas. 1 objetivo:</strong><br/>
+      Convertirte en un DevOps Engineer con experiencia real y un portfolio que impresione a cualquier empresa.
+    </p>
+    <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+      <div style={{ background: 'rgba(255,255,255,0.2)', padding: '0.5rem 1rem', borderRadius: '25px', backdropFilter: 'blur(10px)' }}>
+        ⏱️ <strong>15-20h</strong> por semana
+      </div>
+      <div style={{ background: 'rgba(255,255,255,0.2)', padding: '0.5rem 1rem', borderRadius: '25px', backdropFilter: 'blur(10px)' }}>
+        🛠️ <strong>100%</strong> Hands-on
+      </div>
+      <div style={{ background: 'rgba(255,255,255,0.2)', padding: '0.5rem 1rem', borderRadius: '25px', backdropFilter: 'blur(10px)' }}>
+        🎯 <strong>1 proyecto</strong> completo
+      </div>
+    </div>
+  </div>
+</div>
 
-Bienvenido al **Programa 90 días de DevOps con Roxs**, una experiencia intensiva y práctica para dominar las habilidades esenciales de **DevOps**. Aquí aprenderás a implementar, automatizar y escalar aplicaciones modernas utilizando las herramientas y metodologías más demandadas en la industria. Este plan está diseñado para que avances paso a paso, construyendo un proyecto real mientras adquieres conocimientos sólidos y aplicables desde el primer día.
+## 🚀 Tu Transformación DevOps: El Journey Completo
+
+### 📈 Roadmap Visual de Aprendizaje
+
+```mermaid
+gantt
+    title 🗓️ Plan de Estudio - 90 Días DevOps
+    dateFormat  YYYY-MM-DD
+    section 🐧 Fundamentos
+    Linux + Vagrant + Ansible    :done, linux, 2025-06-01, 2025-06-07
+    Docker & Compose             :done, docker, 2025-06-08, 2025-06-14
+    
+    section 🔄 CI/CD
+    GitHub Actions               :active, cicd, 2025-06-15, 2025-06-21
+    Terraform + Docker           :terraform, 2025-06-22, 2025-06-28
+    
+    section ☸️ Orquestación
+    Kubernetes Local             :k8s1, 2025-06-29, 2025-07-05
+    CI/CD to K8s                 :k8s2, 2025-07-06, 2025-07-12
+    
+    section 🔒 Seguridad & Performance
+    Security & Troubleshooting   :security, 2025-07-13, 2025-07-19
+    Observabilidad               :monitoring, 2025-07-20, 2025-07-26
+    
+    section ☁️ Cloud & Final
+    Localstack (AWS Sim)         :cloud, 2025-07-27, 2025-08-02
+    Automatización Avanzada      :advanced, 2025-08-03, 2025-08-09
+    Despliegue AWS (Opcional)    :aws, 2025-08-10, 2025-08-16
+```
+
+### 🎯 Tu Evolución Profesional
+
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem', margin: '2rem 0' }}>
+  <div style={{ textAlign: 'center' }}>
+    <div style={{ 
+      width: '80px', 
+      height: '80px', 
+      background: 'var(--ifm-color-primary)', 
+      borderRadius: '50%', 
+      display: 'flex', 
+      alignItems: 'center', 
+      justifyContent: 'center', 
+      fontSize: '2rem', 
+      margin: '0 auto 1rem auto',
+      color: 'white'
+    }}>
+      🌱
+    </div>
+    <h4 style={{ color: 'var(--ifm-color-primary)', marginBottom: '0.5rem' }}>Semanas 1-2: Principiante</h4>
+    <p style={{ fontSize: '0.9rem', color: 'var(--ifm-color-content)', opacity: 0.8 }}>
+      Fundamentos sólidos con Linux, Docker y automatización básica
+    </p>
+  </div>
+  
+  <div style={{ textAlign: 'center' }}>
+    <div style={{ 
+      width: '80px', 
+      height: '80px', 
+      background: 'var(--ifm-color-warning)', 
+      borderRadius: '50%', 
+      display: 'flex', 
+      alignItems: 'center', 
+      justifyContent: 'center', 
+      fontSize: '2rem', 
+      margin: '0 auto 1rem auto',
+      color: 'white'
+    }}>
+      🔥
+    </div>
+    <h4 style={{ color: 'var(--ifm-color-warning)', marginBottom: '0.5rem' }}>Semanas 3-6: Intermedio</h4>
+    <p style={{ fontSize: '0.9rem', color: 'var(--ifm-color-content)', opacity: 0.8 }}>
+      CI/CD, IaC con Terraform y orquestación con Kubernetes
+    </p>
+  </div>
+  
+  <div style={{ textAlign: 'center' }}>
+    <div style={{ 
+      width: '80px', 
+      height: '80px', 
+      background: 'var(--ifm-color-success)', 
+      borderRadius: '50%', 
+      display: 'flex', 
+      alignItems: 'center', 
+      justifyContent: 'center', 
+      fontSize: '2rem', 
+      margin: '0 auto 1rem auto',
+      color: 'white'
+    }}>
+      ⚡
+    </div>
+    <h4 style={{ color: 'var(--ifm-color-success)', marginBottom: '0.5rem' }}>Semanas 7-9: Avanzado</h4>
+    <p style={{ fontSize: '0.9rem', color: 'var(--ifm-color-content)', opacity: 0.8 }}>
+      Seguridad, observabilidad y simulación de infraestructura cloud
+    </p>
+  </div>
+  
+  <div style={{ textAlign: 'center' }}>
+    <div style={{ 
+      width: '80px', 
+      height: '80px', 
+      background: 'linear-gradient(135deg, #ff6b6b, #ee5a24)', 
+      borderRadius: '50%', 
+      display: 'flex', 
+      alignItems: 'center', 
+      justifyContent: 'center', 
+      fontSize: '2rem', 
+      margin: '0 auto 1rem auto',
+      color: 'white'
+    }}>
+      🏆
+    </div>
+    <h4 style={{ color: '#ee5a24', marginBottom: '0.5rem' }}>Semanas 10-11: Expert</h4>
+    <p style={{ fontSize: '0.9rem', color: 'var(--ifm-color-content)', opacity: 0.8 }}>
+      Automatización enterprise y despliegue en cloud real
+    </p>
+  </div>
+</div>
 
 ## 🗓️ **Programa Semana a Semana**
 | **Semana** | **Tema Clave**                             | **Proyecto a construir**                     |

@@ -1,0 +1,356 @@
+.eventAnalytics {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: var(--ifm-font-family-base);
+}
+
+.analyticsHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.analyticsHeader h2 {
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.analyticsHeader p {
+  color: var(--ifm-color-content-secondary);
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Métricas Grid */
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.metricCard {
+  background: var(--ifm-background-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-left: 4px solid;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metricCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.metricCard.primary { border-left-color: var(--ifm-color-primary); }
+.metricCard.info { border-left-color: #2196F3; }
+.metricCard.success { border-left-color: #4CAF50; }
+.metricCard.warning { border-left-color: #FF9800; }
+
+.metricIcon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.metricContent h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--ifm-color-content);
+}
+
+.metricContent p {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ifm-color-content);
+}
+
+.metricDescription {
+  font-size: 0.85rem;
+  color: var(--ifm-color-content-secondary);
+}
+
+/* Navegación Analytics */
+.analyticsNav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.navBtn {
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-content);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.navBtn:hover {
+  border-color: var(--ifm-color-primary);
+  background: var(--ifm-color-primary-lightest);
+}
+
+.navBtn.active {
+  background: var(--ifm-color-primary);
+  color: white;
+  border-color: var(--ifm-color-primary);
+}
+
+/* Sección Overview */
+.overviewSection {
+  margin-bottom: 2rem;
+}
+
+.insightCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.insightCard {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.insightCard h4 {
+  margin: 0 0 1rem 0;
+  color: var(--ifm-color-content);
+  font-size: 1.1rem;
+}
+
+.insightValue {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--ifm-color-primary);
+  margin: 0 0 0.5rem 0;
+}
+
+.insightCard span {
+  color: var(--ifm-color-content-secondary);
+  font-size: 0.9rem;
+}
+
+/* Sección Distribución */
+.distributionSection h3 {
+  color: var(--ifm-color-content);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.distributionChart {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.distributionItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.distributionBar {
+  flex: 1;
+  height: 20px;
+  background: var(--ifm-color-emphasis-200);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.distributionFill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.8s ease;
+}
+
+.distributionInfo {
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.distributionType {
+  font-weight: 600;
+  color: var(--ifm-color-content);
+}
+
+.distributionStats {
+  font-size: 0.9rem;
+  color: var(--ifm-color-content-secondary);
+}
+
+/* Sección Timeline */
+.timelineSection h3 {
+  color: var(--ifm-color-content);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.timelineList {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.timelineItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--ifm-background-color);
+  border-radius: 8px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.timelineDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+}
+
+.timelineContent h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--ifm-color-content);
+  font-size: 1.1rem;
+}
+
+.timelineDate {
+  margin: 0 0 0.25rem 0;
+  color: var(--ifm-color-content-secondary);
+  font-size: 0.9rem;
+}
+
+.timelineDays {
+  margin: 0;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  font-size: 0.9rem;
+}
+
+/* Recomendaciones */
+.recommendationsSection {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--ifm-color-info-contrast-background);
+  border: 1px solid var(--ifm-color-info);
+  border-radius: 12px;
+}
+
+.recommendationsSection h3 {
+  margin: 0 0 1.5rem 0;
+  color: var(--ifm-color-info-dark);
+  text-align: center;
+}
+
+.recommendations {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.recommendation {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+}
+
+.recommendationIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.recommendation strong {
+  color: var(--ifm-color-info-dark);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.recommendation p {
+  margin: 0;
+  color: var(--ifm-color-info-dark);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .eventAnalytics {
+    padding: 0 0.5rem;
+  }
+  
+  .analyticsHeader h2 {
+    font-size: 2rem;
+  }
+  
+  .metricsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .metricCard {
+    padding: 1rem;
+  }
+  
+  .metricIcon {
+    font-size: 2rem;
+  }
+  
+  .analyticsNav {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .navBtn {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .insightCards {
+    grid-template-columns: 1fr;
+  }
+  
+  .distributionItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .distributionInfo {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .timelineItem {
+    padding: 0.75rem;
+  }
+  
+  .recommendationsSection {
+    padding: 1.5rem;
+  }
+  
+  .recommendation {
+    flex-direction: column;
+    text-align: center;
+  }
+}

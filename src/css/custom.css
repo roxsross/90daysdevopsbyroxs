@@ -15,6 +15,24 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  
+  /* Warning colors for better contrast */
+  --ifm-color-warning: #ff8c00;
+  --ifm-color-warning-dark: #e67e00;
+  --ifm-color-warning-darker: #cc7000;
+  --ifm-color-warning-darkest: #b36300;
+  --ifm-color-warning-light: #ff9500;
+  --ifm-color-warning-lighter: #ffa500;
+  --ifm-color-warning-lightest: #fff4e6;
+  
+  /* Success colors */
+  --ifm-color-success: #2e8555;
+  --ifm-color-success-dark: #29784c;
+  --ifm-color-success-darker: #277148;
+  --ifm-color-success-darkest: #205d3b;
+  --ifm-color-success-light: #33925d;
+  --ifm-color-success-lighter: #359962;
+  --ifm-color-success-lightest: #e8f5e8;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -27,4 +45,657 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  
+  /* Warning colors for dark mode - better contrast */
+  --ifm-color-warning: #ffa500;
+  --ifm-color-warning-dark: #ff9500;
+  --ifm-color-warning-darker: #ff8c00;
+  --ifm-color-warning-darkest: #e67e00;
+  --ifm-color-warning-light: #ffb520;
+  --ifm-color-warning-lighter: #ffc440;
+  --ifm-color-warning-lightest: #2d2a1f;
+  
+  /* Success colors for dark mode */
+  --ifm-color-success: #00d2d3;
+  --ifm-color-success-dark: #00bdc0;
+  --ifm-color-success-darker: #00a8ab;
+  --ifm-color-success-darkest: #009497;
+  --ifm-color-success-light: #1ae7e8;
+  --ifm-color-success-lighter: #33fbfc;
+  --ifm-color-success-lightest: #1a2d2a;
+}
+
+/* Enhanced Mermaid diagram styles for better visibility in both themes */
+.mermaid {
+  background: var(--ifm-background-color);
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+/* Enhanced Mermaid diagram styles for dark theme compatibility */
+.mermaid {
+  background: var(--ifm-card-background-color);
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+/* Light theme Mermaid colors */
+:root {
+  --mermaid-theme: default;
+  --mermaid-primary-color: var(--ifm-color-primary);
+  --mermaid-primary-text-color: #333;
+  --mermaid-primary-border-color: var(--ifm-color-primary-dark);
+  --mermaid-line-color: #333;
+  --mermaid-section-bg-color: var(--ifm-background-color);
+  --mermaid-alt-section-bg-color: var(--ifm-color-emphasis-100);
+  --mermaid-grid-color: var(--ifm-color-emphasis-300);
+  --mermaid-c0-fill: #e1f5fe;
+  --mermaid-c1-fill: #f3e5f5;
+  --mermaid-c2-fill: #fff3e0;
+  --mermaid-c3-fill: #e8f5e8;
+  --mermaid-c4-fill: #fff8e1;
+  --mermaid-c5-fill: #fce4ec;
+  --mermaid-c6-fill: #e0f2f1;
+  --mermaid-c7-fill: #f1f8e9;
+}
+
+/* Dark theme Mermaid colors */
+[data-theme='dark'] {
+  --mermaid-theme: dark;
+  --mermaid-primary-color: var(--ifm-color-primary);
+  --mermaid-primary-text-color: #fff;
+  --mermaid-primary-border-color: var(--ifm-color-primary-light);
+  --mermaid-line-color: #fff;
+  --mermaid-section-bg-color: var(--ifm-background-color);
+  --mermaid-alt-section-bg-color: var(--ifm-color-emphasis-200);
+  --mermaid-grid-color: var(--ifm-color-emphasis-400);
+  --mermaid-c0-fill: #1e3a8a;
+  --mermaid-c1-fill: #7c3aed;
+  --mermaid-c2-fill: #ea580c;
+  --mermaid-c3-fill: #16a34a;
+  --mermaid-c4-fill: #ca8a04;
+  --mermaid-c5-fill: #dc2626;
+  --mermaid-c6-fill: #0891b2;
+  --mermaid-c7-fill: #65a30d;
+}
+
+/* Dark theme Mermaid enhancements */
+[data-theme='dark'] .mermaid .node rect,
+[data-theme='dark'] .mermaid .node circle,
+[data-theme='dark'] .mermaid .node ellipse,
+[data-theme='dark'] .mermaid .node polygon {
+  stroke: var(--ifm-color-emphasis-600) !important;
+  stroke-width: 2px !important;
+}
+
+[data-theme='dark'] .mermaid .edgePath .path {
+  stroke: var(--ifm-color-emphasis-600) !important;
+  stroke-width: 2px !important;
+}
+
+[data-theme='dark'] .mermaid .nodeLabel,
+[data-theme='dark'] .mermaid .edgeLabel span {
+  color: var(--ifm-font-color-base) !important;
+  font-weight: 600 !important;
+}
+
+[data-theme='dark'] .mermaid .edgeLabel {
+  background-color: var(--ifm-background-color) !important;
+  color: var(--ifm-font-color-base) !important;
+}
+
+/* Mermaid flowchart enhancements */
+[data-theme='dark'] .mermaid .node rect,
+[data-theme='dark'] .mermaid .node circle,
+[data-theme='dark'] .mermaid .node ellipse,
+[data-theme='dark'] .mermaid .node polygon {
+  stroke: var(--ifm-color-emphasis-600) !important;
+  stroke-width: 2px !important;
+}
+
+[data-theme='dark'] .mermaid .edgePath .path {
+  stroke: var(--ifm-color-emphasis-600) !important;
+  stroke-width: 2px !important;
+}
+
+[data-theme='dark'] .mermaid .edgeLabel {
+  background-color: var(--ifm-background-color) !important;
+  color: var(--ifm-font-color-base) !important;
+}
+
+/* Enhanced text visibility in Mermaid diagrams */
+[data-theme='dark'] .mermaid .nodeLabel,
+[data-theme='dark'] .mermaid .edgeLabel span {
+  color: var(--ifm-font-color-base) !important;
+  font-weight: 600 !important;
+}
+
+/* Mermaid sequence diagram enhancements for dark mode */
+[data-theme='dark'] .mermaid .actor {
+  fill: var(--ifm-color-primary) !important;
+  stroke: var(--ifm-color-primary-dark) !important;
+}
+
+[data-theme='dark'] .mermaid .messageLine0,
+[data-theme='dark'] .mermaid .messageLine1 {
+  stroke: var(--ifm-color-emphasis-600) !important;
+}
+
+/* Enhanced visibility for pipeline diagrams */
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+  background: transparent;
+}
+
+/* DevOps Pipeline specific styles */
+.devops-pipeline-diagram {
+  padding: 2rem;
+  background: var(--ifm-card-background-color);
+  border-radius: 16px;
+  margin: 2rem 0;
+  border: 2px solid var(--ifm-color-emphasis-300);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.devops-pipeline-diagram .mermaid {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* Responsive improvements for Mermaid diagrams */
+@media (max-width: 768px) {
+  .mermaid {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .devops-pipeline-diagram {
+    padding: 1rem;
+  }
+}
+
+/* Enhanced grid styles that work in both themes */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.responsive-grid-item {
+  background: var(--ifm-card-background-color);
+  border: 2px solid var(--ifm-color-emphasis-300);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: all 0.3s ease;
+}
+
+.responsive-grid-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ifm-global-shadow-md);
+  border-color: var(--ifm-color-primary);
+}
+
+/* Enhanced contrast for all cards */
+.enhanced-card {
+  background: var(--ifm-card-background-color);
+  border: 2px solid var(--ifm-color-emphasis-300);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: all 0.3s ease;
+}
+
+.enhanced-card:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+/* Special gradient border for important sections */
+.gradient-border-card {
+  position: relative;
+  background: var(--ifm-card-background-color);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem 0;
+  overflow: hidden;
+}
+
+.gradient-border-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    var(--ifm-color-primary), 
+    var(--ifm-color-secondary), 
+    var(--ifm-color-primary));
+  z-index: 1;
+}
+
+/* ===== FOOTER STYLES - MODERNIZED ===== */
+
+/* Footer general improvements */
+.footer {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d3748 100%) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02' fill-rule='evenodd'%3E%3Cpath d='M20 8l5 10h10l-8 6 3 10-10-7-10 7 3-10-8-6h10z'/%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.footer__content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Footer logo improvements */
+.footer__logo {
+  transition: all 0.3s ease;
+  filter: brightness(1.1);
+}
+
+.footer__logo:hover {
+  transform: scale(1.05);
+  filter: brightness(1.3);
+}
+
+/* Footer links styling */
+.footer__title {
+  color: var(--ifm-color-primary-lightest) !important;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer__item {
+  margin-bottom: 0.5rem;
+}
+
+.footer__link-item {
+  color: rgba(255, 255, 255, 0.8) !important;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.25rem 0;
+  display: inline-block;
+}
+
+.footer__link-item:hover {
+  color: var(--ifm-color-primary-light) !important;
+  transform: translateX(5px);
+  text-decoration: none;
+}
+
+/* External links styling */
+.footer__link-item[href^="http"]:hover {
+  color: var(--ifm-color-warning-light) !important;
+}
+
+/* Footer bottom section */
+.footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 2rem;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+/* Social media links in footer */
+.footer__bottom a {
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin: 0 0.25rem;
+}
+
+.footer__bottom a:hover {
+  transform: translateY(-2px) scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Dark mode specific footer adjustments */
+[data-theme='dark'] .footer {
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 100%) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .footer__title {
+  color: var(--ifm-color-primary-lighter) !important;
+}
+
+[data-theme='dark'] .footer__link-item {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+[data-theme='dark'] .footer__link-item:hover {
+  color: var(--ifm-color-primary-lighter) !important;
+}
+
+/* Light mode footer adjustments */
+[data-theme='light'] .footer {
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: white !important;
+}
+
+[data-theme='light'] .footer__title {
+  color: var(--ifm-color-primary-lightest) !important;
+}
+
+[data-theme='light'] .footer__link-item {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+[data-theme='light'] .footer__link-item:hover {
+  color: var(--ifm-color-primary-lightest) !important;
+}
+
+/* Responsive footer adjustments */
+@media (max-width: 768px) {
+  .footer__title {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .footer__links {
+    text-align: center;
+  }
+  
+  .footer__col {
+    margin-bottom: 2rem;
+  }
+  
+  .footer__bottom {
+    font-size: 0.9rem;
+  }
+}
+
+/* Footer animation on scroll */
+.footer {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced footer link hover effects */
+.footer__link-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer__link-item::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--ifm-color-primary);
+  transition: width 0.3s ease;
+}
+
+.footer__link-item:hover::before {
+  width: 100%;
+}
+
+/* Footer logo container */
+.footer__logo img {
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px;
+}
+
+/* Footer responsive grid */
+.footer__links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+@media (max-width: 996px) {
+  .footer__links {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer__links {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* ===== PRE-FOOTER CALL-TO-ACTION SECTION ===== */
+
+/* Community CTA section before footer */
+.community-cta {
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
+  padding: 3rem 2rem;
+  color: white;
+  text-align: center;
+  margin-top: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.community-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M30 12l7.5 15h15L37.5 38.5l5 16.5L30 45l-12.5 10 5-16.5L7.5 27h15z'/%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.community-cta > * {
+  position: relative;
+  z-index: 1;
+}
+
+.community-cta h2 {
+  color: white !important;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.community-cta p {
+  font-size: 1.2rem;
+  opacity: 0.95;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}
+
+.community-cta .cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.community-cta .cta-button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.community-cta .cta-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  color: white;
+}
+
+.community-cta .cta-button.primary {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--ifm-color-primary-dark);
+  border-color: white;
+}
+
+.community-cta .cta-button.primary:hover {
+  background: white;
+  color: var(--ifm-color-primary-darker);
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Social proof section in pre-footer */
+.social-proof {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.social-proof-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+}
+
+.social-proof-item .icon {
+  font-size: 1.2rem;
+}
+
+/* Responsive adjustments for community CTA */
+@media (max-width: 768px) {
+  .community-cta {
+    padding: 2rem 1rem;
+  }
+  
+  .community-cta h2 {
+    font-size: 2rem;
+  }
+  
+  .community-cta p {
+    font-size: 1rem;
+  }
+  
+  .community-cta .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .community-cta .cta-button {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .social-proof {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Newsletter signup in pre-footer */
+.newsletter-signup {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 500px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.newsletter-signup h3 {
+  color: white !important;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.newsletter-signup p {
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  min-width: 200px;
+}
+
+.newsletter-button {
+  background: var(--ifm-color-warning);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletter-button:hover {
+  background: var(--ifm-color-warning-dark);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 576px) {
+  .newsletter-form {
+    flex-direction: column;
+  }
+  
+  .newsletter-input,
+  .newsletter-button {
+    width: 100%;
+  }
 }
