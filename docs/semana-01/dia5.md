@@ -814,7 +814,7 @@ En este reto vas a crear un script Bash para desplegar una aplicación Node.js u
 Automatizar el despliegue de una app Node.js siguiendo estos pasos:
 
 1. Instalar Node.js, npm y PM2 si no están presentes.
-2. Clonar el repositorio de la aplicación.
+2. Clonar el repositorio de la aplicación. `git clone -b ecommerce-ms https://github.com/roxsross/devops-static-web.git`
 3. Instalar dependencias con `npm install`.
 4. Iniciar la app con PM2.
 5. Guardar la configuración de PM2 para reinicio automático.
