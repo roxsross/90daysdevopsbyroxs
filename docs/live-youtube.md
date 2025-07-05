@@ -240,6 +240,125 @@ keywords: [youtube, live, streaming, devops, roxs, tutoriales, docker, kubernete
 
 </div>
 
+## � Semana 3: Docker Parte II
+
+<div style={{display: 'grid', gridTemplateColumns: '1fr', gap: '2rem', margin: '2rem 0'}}>
+
+<div style={{
+  background: 'var(--ifm-card-background-color)', 
+  padding: '2rem', 
+  borderRadius: '16px',
+  border: '2px solid #00bcd4',
+  boxShadow: 'var(--ifm-global-shadow-md)'
+}}>
+
+### 📦 Maratón Docker de 4 Hrs
+
+<div style={{position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '12px', marginBottom: '1rem'}}>
+  <iframe 
+    style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}
+    src="https://www.youtube.com/embed/PbPWfIi-tN8" 
+    title="Maratón Docker de 4 Hrs | Aprende DevOps desde Cero con Roxs 🐳 | Errores y Fuego Real" 
+    frameBorder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowFullScreen>
+  </iframe>
+</div>
+
+<div style={{display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center', margin: '1rem 0'}}>
+  <a 
+    href="https://www.youtube.com/embed/PbPWfIi-tN8" 
+    target="_blank" 
+    style={{
+      display: 'inline-block',
+      background: '#ff0000',
+      color: 'white',
+      padding: '0.75rem 1.5rem',
+      borderRadius: '25px',
+      textDecoration: 'none',
+      fontWeight: 'bold'
+    }}
+  >
+    🔗 Ver en YouTube
+  </a>
+  
+  <a 
+    href="https://github.com/roxsross/roxs-pacman-ops" 
+    target="_blank" 
+    style={{
+      display: 'inline-block',
+      background: '#333',
+      color: 'white',
+      padding: '0.75rem 1.5rem',
+      borderRadius: '25px',
+      textDecoration: 'none',
+      fontWeight: 'bold'
+    }}
+  >
+    🎮 Proyecto Pacman
+  </a>
+</div>
+
+**📋 Contenido de esta sesión:**
+- 🐳 **Docker Avanzado**: Dockerfile, imágenes y capas
+- 🔗 **Docker Compose**: Orquestación de múltiples contenedores
+- 🌐 **Networking**: Comunicación entre contenedores
+- 📊 **Volúmenes**: Persistencia de datos
+- 🎮 **Proyecto Pacman**: Aplicación multi-contenedor
+
+**Documentacion**
+- 🥧 [Docker Buildx Bake](https://docs.docker.com/build/bake/) - Orquestación avanzada de builds con Bake
+**� Laboratorios recomendados:**
+- 🧪 [KodeKloud Free Labs](https://kodekloud.com/free-labs) - Docker práctico
+- 📚 [Docker Getting Started Workshop](https://docs.docker.com/get-started/workshop/) - Guía oficial
+- 🎯 [Play with Docker](https://labs.play-with-docker.com/) - Laboratorio online
+- 🚀 [Docker to Kubernetes Live](https://www.dockertokubernetes.live/) - Aprende a llevar tus proyectos de Docker a Kubernetes paso a paso
+---
+
+## 🚀 Bonus: ¿Sabías que puedes practicar DevOps en la nube con GitHub Codespaces?
+
+<div style={{
+  background: 'linear-gradient(135deg, #24292f 0%, #5865f2 100%)',
+  padding: '2rem',
+  borderRadius: '16px',
+  color: 'white',
+  margin: '2rem 0',
+  boxShadow: 'var(--ifm-global-shadow-md)'
+}}>
+  <div style={{fontSize: '2rem', marginBottom: '1rem'}}>💻</div>
+  <h3 style={{color: 'white', margin: '0.5rem 0'}}>GitHub Codespaces</h3>
+  <p style={{opacity: 0.95}}>
+    Codespaces te permite crear entornos de desarrollo completos en la nube, directamente desde tu navegador, con soporte para Docker, VS Code y mucho más.
+  </p>
+  <a 
+    href="https://github.com/features/codespaces"
+    target="_blank"
+    style={{
+      display: 'inline-block',
+      background: '#2ea44f',
+      color: 'white',
+      padding: '0.75rem 1.5rem',
+      borderRadius: '25px',
+      textDecoration: 'none',
+      fontWeight: 'bold',
+      marginTop: '1rem'
+    }}
+  >
+    🌐 Más info sobre Codespaces
+  </a>
+</div>
+
+**¿Por qué usar Codespaces para DevOps?**
+- 🚀 Entorno listo en segundos, sin instalaciones locales
+- 🐳 Soporte nativo para Docker y contenedores
+- 🛠️ Ideal para practicar CI/CD, scripting y automatización
+- 🌍 Accesible desde cualquier lugar
+
+---
+
+</div>
+
+</div>
 ---
 
 ## 📊 Analytics de la Comunidad
