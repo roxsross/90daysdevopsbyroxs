@@ -28,122 +28,6 @@ Todos nuestros eventos están programados en **hora de Argentina (GMT-3)**. Si e
   </p>
 </div>
 
-## �️ Eventos Programados
-
-<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem', margin: '3rem 0'}}>
-
-<div style={{
-  background: 'var(--ifm-card-background-color)',
-  padding: '2rem',
-  borderRadius: '16px',
-  border: '2px solid var(--ifm-color-primary)',
-  boxShadow: 'var(--ifm-global-shadow-md)'
-}}>
-  <div style={{
-    background: 'var(--ifm-color-primary)',
-    color: 'white',
-    padding: '1rem',
-    borderRadius: '12px',
-    textAlign: 'center',
-    marginBottom: '1rem'
-  }}>
-    <div style={{fontSize: '2rem', marginBottom: '0.5rem'}}>🎯</div>
-    <h3 style={{color: 'white', margin: 0}}>Workshops Técnicos</h3>
-  </div>
-  <ul style={{color: 'var(--ifm-font-color-base)', margin: 0}}>
-    <li><strong>Duración:</strong> 2-3 horas</li>
-    <li><strong>Formato:</strong> Hands-on práctico</li>
-    <li><strong>Requisitos:</strong> Docker instalado</li>
-    <li><strong>Horario:</strong> Sábados 14:00 ART</li>
-  </ul>
-</div>
-
-<div style={{
-  background: 'var(--ifm-card-background-color)',
-  padding: '2rem',
-  borderRadius: '16px',
-  border: '2px solid var(--ifm-color-success)',
-  boxShadow: 'var(--ifm-global-shadow-md)'
-}}>
-  <div style={{
-    background: 'var(--ifm-color-success)',
-    color: 'white',
-    padding: '1rem',
-    borderRadius: '12px',
-    textAlign: 'center',
-    marginBottom: '1rem'
-  }}>
-    <div style={{fontSize: '2rem', marginBottom: '0.5rem'}}>💬</div>
-    <h3 style={{color: 'white', margin: 0}}>Sesiones Q&A</h3>
-  </div>
-  <ul style={{color: 'var(--ifm-font-color-base)', margin: 0}}>
-    <li><strong>Duración:</strong> 1 hora</li>
-    <li><strong>Formato:</strong> Preguntas y respuestas</li>
-    <li><strong>Plataforma:</strong> Discord + YouTube</li>
-    <li><strong>Horario:</strong> Miércoles 19:00 ART</li>
-  </ul>
-</div>
-
-<div style={{
-  background: 'var(--ifm-card-background-color)',
-  padding: '2rem',
-  borderRadius: '16px',
-  border: '2px solid var(--ifm-color-warning)',
-  boxShadow: 'var(--ifm-global-shadow-md)'
-}}>
-  <div style={{
-    background: 'var(--ifm-color-warning)',
-    color: 'white',
-    padding: '1rem',
-    borderRadius: '12px',
-    textAlign: 'center',
-    marginBottom: '1rem'
-  }}>
-    <div style={{fontSize: '2rem', marginBottom: '0.5rem'}}>🚀</div>
-    <h3 style={{color: 'white', margin: 0}}>Demos de Proyectos</h3>
-  </div>
-  <ul style={{color: 'var(--ifm-font-color-base)', margin: 0}}>
-    <li><strong>Duración:</strong> 1.5 horas</li>
-    <li><strong>Formato:</strong> Demostración en vivo</li>
-    <li><strong>Enfoque:</strong> Proyectos reales</li>
-    <li><strong>Horario:</strong> Domingos 16:00 ART</li>
-  </ul>
-</div>
-
-</div>
-
-## 🌐 Zonas Horarias
-
-<div style={{
-  background: 'var(--ifm-color-emphasis-100)',
-  padding: '2rem',
-  borderRadius: '12px',
-  margin: '2rem 0'
-}}>
-  <h3 style={{textAlign: 'center', marginBottom: '1.5rem'}}>🕐 Conversión de Horarios</h3>
-  <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem'}}>
-    <div style={{textAlign: 'center'}}>
-      <div style={{fontSize: '1.5rem'}}>🇦🇷</div>
-      <strong>Argentina/Chile</strong><br/>
-      GMT-3 (hora base)
-    </div>
-    <div style={{textAlign: 'center'}}>
-      <div style={{fontSize: '1.5rem'}}>��</div>
-      <strong>Colombia/Ecuador</strong><br/>
-      GMT-5 (-2 horas)
-    </div>
-    <div style={{textAlign: 'center'}}>
-      <div style={{fontSize: '1.5rem'}}>��</div>
-      <strong>México CDMX</strong><br/>
-      GMT-6 (-3 horas)
-    </div>
-    <div style={{textAlign: 'center'}}>
-      <div style={{fontSize: '1.5rem'}}>🇪🇸</div>
-      <strong>España</strong><br/>
-      GMT+1 (+4 horas)
-    </div>
-  </div>
-</div>
 
 ## � Calendario Integrado
 
@@ -159,7 +43,7 @@ Todos nuestros eventos están programados en **hora de Argentina (GMT-3)**. Si e
   
   <div style={{display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1rem'}}>
     <a 
-      href="https://calendar.google.com/calendar/u/0?cid=calendario295devops@gmail.com" 
+      href="https://calendar.google.com/calendar/u/0/embed?src=69e0096b8ebf5cfa5db7f7f4c934fc0ea8e33cf715468e1cabb857fbe012c798@group.calendar.google.com&ctz=UTC-3" 
       target="_blank"
       style={{
         background: 'var(--ifm-color-primary)',
@@ -171,20 +55,6 @@ Todos nuestros eventos están programados en **hora de Argentina (GMT-3)**. Si e
       }}
     >
       � Google Calendar
-    </a>
-    <a 
-      href="https://outlook.live.com/calendar/0/addcalendar" 
-      target="_blank"
-      style={{
-        background: 'var(--ifm-color-info)',
-        color: 'white',
-        padding: '0.8rem 1.5rem',
-        borderRadius: '25px',
-        textDecoration: 'none',
-        fontWeight: '600'
-      }}
-    >
-      📧 Outlook
     </a>
   </div>
 </div>
@@ -211,11 +81,11 @@ Todos nuestros eventos están programados en **hora de Argentina (GMT-3)**. Si e
     style={{
       background: 'rgba(255,255,255,0.2)',
       color: 'white',
-      padding: '0.8rem 1.5rem',
-      borderRadius: '25px',
-      textDecoration: 'none',
+      // padding: '0.8rem 1.5rem',
+      // borderRadius: '25px',
+      // textDecoration: 'none',
       fontWeight: '600',
-      border: '1px solid rgba(255,255,255,0.3)'
+      // border: '1px solid rgba(255,255,255,0.3)'
     }}
   >
     Únete Ahora
@@ -240,11 +110,11 @@ Todos nuestros eventos están programados en **hora de Argentina (GMT-3)**. Si e
     style={{
       background: 'rgba(255,255,255,0.2)',
       color: 'white',
-      padding: '0.8rem 1.5rem',
-      borderRadius: '25px',
-      textDecoration: 'none',
+      // padding: '0.8rem 1.5rem',
+      // borderRadius: '25px',
+      // textDecoration: 'none',
       fontWeight: '600',
-      border: '1px solid rgba(255,255,255,0.3)'
+      // border: '1px solid rgba(255,255,255,0.3)'
     }}
   >
     Suscribirse
@@ -253,39 +123,6 @@ Todos nuestros eventos están programados en **hora de Argentina (GMT-3)**. Si e
 
 </div>
 
-## 🎯 Preparación para Eventos
-
-<div style={{
-  background: 'var(--ifm-color-warning-lightest)',
-  border: '2px solid var(--ifm-color-warning)',
-  padding: '2rem',
-  borderRadius: '12px',
-  margin: '2rem 0'
-}}>
-  <h3 style={{color: 'var(--ifm-color-warning-dark)', marginBottom: '1rem'}}>
-    ⚡ Checklist Técnico
-  </h3>
-  <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem'}}>
-    <div>
-      <h4>� Software Requerido:</h4>
-      <ul>
-        <li>✅ Docker Desktop</li>
-        <li>✅ Git configurado</li>
-        <li>✅ VS Code o editor</li>
-        <li>✅ Terminal funcional</li>
-      </ul>
-    </div>
-    <div>
-      <h4>� Conexión:</h4>
-      <ul>
-        <li>✅ Internet estable</li>
-        <li>✅ Micrófono para Q&A</li>
-        <li>✅ Discord instalado</li>
-        <li>✅ YouTube abierto</li>
-      </ul>
-    </div>
-  </div>
-</div>
 
 ## 🎥 Grabaciones Disponibles
 
