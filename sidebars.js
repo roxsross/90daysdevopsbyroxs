@@ -109,6 +109,20 @@ const sidebars = {
             'semana-03/dia21',
           ],
         },
+        {
+          type: 'category',
+          label: '4️⃣ Semana 4',
+          collapsed: true,
+          items: [
+            'semana-04/dia22',
+            'semana-04/dia23',
+            'semana-04/dia24',
+            'semana-04/dia25',
+            'semana-04/dia26',
+            'semana-04/dia27',
+            'semana-04/dia28',
+          ],
+        },
       ],
     },
     
