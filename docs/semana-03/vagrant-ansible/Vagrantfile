@@ -1,0 +1,24 @@
+Vagrant.configure("2") do |config|
+  # Usa una imagen ligera de Ubuntu 22.04
+  config.vm.box = "ubuntu/jammy64"
+  
+  # configuración de nombres host interno
+  config.vm.hostname = "Ansible.com.co"
+  # configuración de provedor VirtualBox
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "Ansible"
+  end
+  
+  # Configuración de red (accesible via IP)
+  config.vm.network "private_network", ip: "172.16.0.11"
+  config.vm.boot_timeout = 600
+
+  # Desactiva la carpeta por defecto en /vagrant
+  config.vm.synced_folder ".", "/vagrant", disabled: true
+
+  # Sincroniza carpeta de Windows con la VM
+  config.vm.synced_folder "data-web", "/home/vagrant/data-web", type: "rsync", rsync__auto: true
+  
+  # Provisionamiento con Shell
+  config.vm.provision "shell", path: "install-ansible.sh", privileged: false, run: "always"
+end
