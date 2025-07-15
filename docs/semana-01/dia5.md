@@ -1,6 +1,5 @@
 ---
-
-title: Día 5 - Automatizando Tareas con Bash Scripting 
+title: Día 5 - Automatizando Tareas con Bash Scripting
 description: Automatización avanzada en Bash
 sidebar_position: 5
 ---
@@ -25,7 +24,6 @@ Podés seguir esta clase usando:
 - O incluso 100% online con:
   - [Killercoda](https://killercoda.com/)
 
-
 ---
 
 ## 🧠 Fundamentos de Bash: Scripts y Condicionales
@@ -37,10 +35,11 @@ Antes de empezar con los scripts más útiles, veamos cómo funciona un script b
 Es un archivo de texto con instrucciones que ejecutás en una terminal Linux, como si las escribieras vos misma.
 
 Ejemplo mínimo:
+
 ```bash
 #!/bin/bash
 echo "Hola Roxs DevOps!"
-````
+```
 
 📌 Guardalo como `hola.sh`, dale permisos y ejecutalo:
 
@@ -116,15 +115,14 @@ done
 
 ### 🧪 Buenas prácticas
 
-* Usá `#!/bin/bash` siempre en la primera línea
-* Usá `set -e` para salir si ocurre un error
-* Comentá tu código con `#`
-* Probá scripts en entornos controlados (como Vagrant o online)
+- Usá `#!/bin/bash` siempre en la primera línea
+- Usá `set -e` para salir si ocurre un error
+- Comentá tu código con `#`
+- Probá scripts en entornos controlados (como Vagrant o online)
 
 ---
 
 ## Calentenemos motores
-
 
 ## 🐣 Primeros Pasos con Bash
 
@@ -217,9 +215,9 @@ fi
 
 Creá un script llamado `mi_status.sh` que muestre:
 
-* El nombre del usuario actual
-* El directorio en el que estás
-* La fecha y hora actual
+- El nombre del usuario actual
+- El directorio en el que estás
+- La fecha y hora actual
 
 ```bash
 #!/bin/bash
@@ -231,8 +229,8 @@ echo "Fecha: $(date)"
 ---
 
 > Si trabajas en DevOps o como administrador de sistemas, automatizar tareas rutinarias es esencial.
----
 
+---
 
 ## 📁 Script 1: Monitoreo de Uso de Disco y Alertas 🚨
 
@@ -292,12 +290,12 @@ Reporte en tiempo real de uso de memoria, disco y CPU:
 
 ```bash
 #!/bin/bash
-TIEMPO=$(date "+%Y-%m-%d %H:%M:%S")
 echo -e "Hora\t\t\tMemoria\t\tDisco (root)\tCPU"
 segundos="3600"
 fin=$((SECONDS+segundos))
 
 while [ $SECONDS -lt $fin ]; do
+    TIEMPO=$(date "+%Y-%m-%d %H:%M:%S")
     MEMORIA=$(free -m | awk 'NR==2{printf "%.f%%\t\t", $3*100/$2 }')
     DISCO=$(df -h | awk '$NF=="/"{printf "%s\t\t", $5}')
     CPU=$(top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{printf("%.f\n", 100 - $1)}')
@@ -314,10 +312,9 @@ done
 
 ---
 
-
 ## 📚 Tareas Opcionales del Día 4
 
-> *Hoy diste tus primeros pasos con Bash. Ahora es momento de practicar de verdad.*
+> _Hoy diste tus primeros pasos con Bash. Ahora es momento de practicar de verdad._
 > Elegí los desafíos que más te interesen... ¡o hacelos todos! 😉
 
 ---
@@ -340,15 +337,15 @@ done
 
 4. 🛠 **Creá un script `backup_logs.sh`** que:
 
-   * Comprima el contenido de `/var/log`
-   * Lo guarde con timestamp en `/home/tu_usuario/backups/`
-   * Elimine backups de más de 7 días
+   - Comprima el contenido de `/var/log`
+   - Lo guarde con timestamp en `/home/tu_usuario/backups/`
+   - Elimine backups de más de 7 días
 
 5. 🔍 **Creá `buscar_palabra.sh`** que:
 
-   * Reciba un nombre de archivo y una palabra como argumentos
-   * Busque si la palabra aparece en el archivo (con `grep`)
-   * Devuelva "¡Encontrado!" o "No encontrado."
+   - Reciba un nombre de archivo y una palabra como argumentos
+   - Busque si la palabra aparece en el archivo (con `grep`)
+   - Devuelva "¡Encontrado!" o "No encontrado."
 
 ---
 
@@ -358,14 +355,14 @@ done
 
 7. 🔁 **Creá un `servicio_status.sh`** que:
 
-   * Revise varios servicios (`nginx`, `mysql`, `docker`)
-   * Informe cuáles están activos y cuáles no
-   * Envíe un mail si alguno está caído (tip: usá un array y bucle)
+   - Revise varios servicios (`nginx`, `mysql`, `docker`)
+   - Informe cuáles están activos y cuáles no
+   - Envíe un mail si alguno está caído (tip: usá un array y bucle)
 
 8. 📈 **Extendé el script de salud del sistema** para que:
 
-   * Corte el monitoreo si la CPU supera el 85% tres veces seguidas
-   * O guarde un log separado llamado `alertas_cpu.log`
+   - Corte el monitoreo si la CPU supera el 85% tres veces seguidas
+   - O guarde un log separado llamado `alertas_cpu.log`
 
 ---
 
@@ -373,14 +370,14 @@ done
 
 9. 🎤 **Hacé un script que sea un cuestionario loco**:
 
-   * Preguntá el nombre, edad y color favorito
-   * Mostrá un mensaje personalizado según lo que responda
-   * Usá `if`, `read`, y emojis en `echo` 💥
+   - Preguntá el nombre, edad y color favorito
+   - Mostrá un mensaje personalizado según lo que responda
+   - Usá `if`, `read`, y emojis en `echo` 💥
 
 10. 📸 **Subí tu favorito a redes**
 
-    * Captura de pantalla, gif o video corto
-    * Hashtag: **#BashConRoxs** o **#DevOpsConRoxs**
+    - Captura de pantalla, gif o video corto
+    - Hashtag: **#BashConRoxs** o **#DevOpsConRoxs**
 
 ### Material Extra
 
@@ -388,12 +385,9 @@ Accede al Repositorio [Awesome Bash](https://github.com/awesome-lists/awesome-ba
 
 Libro Recomendado [introduction-to-bash-scripting](https://github.com/bobbyiliev/introduction-to-bash-scripting)
 
-
 ---
 
-
 ## ⚙️ Automatizando Tareas con Bash Scripting II
-
 
 ---
 
@@ -570,6 +564,7 @@ mostrar_ayuda
 ---
 
 ## 🎯 Reto del Día 5
+
 ---
 
 > Automatización + modularidad + validación = nivel DevOps pro
@@ -597,7 +592,7 @@ crear_usuario() {
 }
 ```
 
-**gestion\_usuarios.sh**
+**gestion_usuarios.sh**
 
 ```bash
 #!/bin/bash
@@ -613,8 +608,8 @@ crear_usuario "$1"
 
 🙌 Cuando termines, compartí tu captura con el log o el resultado del script con el hashtag **#BashProConRoxs**
 
-
 --
+
 ### 💥 Bonus: Automatizá el Despliegue de la Aplicación Flask 📚"Book Library"📚 con Nginx y Gunicorn
 
 ¡En este desafío vas a crear un **script de automatización completo** que despliegue una aplicación Flask usando Gunicorn como servidor WSGI y Nginx como proxy inverso!
@@ -626,13 +621,15 @@ crear_usuario "$1"
 Crear un script llamado `desplegar_app.sh` que realice automáticamente los siguientes pasos:
 
 1. ✅ Instale dependencias necesarias: Python, pip, virtualenv, Nginx y Git.
-  ```bash
-  instalar_dependencias() {
-    sudo apt update
-    sudo apt install -y python3 python3-pip python3-venv nginx git
-  }
-  instalar_dependencias
-  ```
+
+```bash
+instalar_dependencias() {
+  sudo apt update
+  sudo apt install -y python3 python3-pip python3-venv nginx git
+}
+instalar_dependencias
+```
+
 2. 🧱 Cree un entorno virtual, instale dependencias y clone la app:
 
    ```bash
@@ -642,11 +639,13 @@ Crear un script llamado `desplegar_app.sh` que realice automáticamente los sigu
    pip install -r requirements.txt
    pip install gunicorn
    ```
+
 3. 🚀 Configure Gunicorn para correr la app:
 
    ```bash
    gunicorn -w 4 -b 127.0.0.1:8000 library_site:app:app
    ```
+
 4. 🌐 Configure Nginx para redirigir al puerto 8000 de Gunicorn.
 5. 🔄 Reinicie servicios y verifique que todo esté online.
 6. 📜 Guarde logs del proceso en `logs_despliegue.txt`
@@ -689,16 +688,16 @@ configurar_gunicorn() {
 
 configurar_nginx() {
   echo "Configurando Nginx..." | tee -a ../$LOG
-  
+
   # NUEVO: Eliminar configuración por defecto
   sudo rm -f /etc/nginx/sites-enabled/default
-  
+
   # CORREGIDO: Usar 127.0.0.1:8000 en lugar de 0.0.0.0:8000
   sudo tee /etc/nginx/sites-available/booklibrary > /dev/null <<EOF
 server {
     listen 80;
     server_name _;
-    
+
     location / {
         proxy_pass http://127.0.0.1:8000;
         proxy_set_header Host \$host;
@@ -707,45 +706,45 @@ server {
         proxy_set_header X-Forwarded-Proto \$scheme;
         proxy_redirect off;
     }
-    
+
     location /static/ {
         alias $(pwd)/static/;
         expires 30d;
     }
-    
+
     access_log /var/log/nginx/booklibrary_access.log;
     error_log /var/log/nginx/booklibrary_error.log;
 }
 EOF
-  
+
   sudo ln -sf /etc/nginx/sites-available/booklibrary /etc/nginx/sites-enabled/
   sudo nginx -t >> ../$LOG 2>&1 && sudo systemctl reload nginx
 }
 
 verificar_servicios() {
   echo "Verificando servicios..." | tee -a ../$LOG
-  
+
   # Verificar Nginx
   if systemctl is-active --quiet nginx; then
     echo "✓ Nginx está activo" | tee -a ../$LOG
   else
     echo "✗ Nginx no está activo" | tee -a ../$LOG
   fi
-  
+
   # Verificar Gunicorn
   if pgrep -f "gunicorn.*library_site" > /dev/null; then
     echo "✓ Gunicorn está corriendo" | tee -a ../$LOG
   else
     echo "✗ Gunicorn no está corriendo" | tee -a ../$LOG
   fi
-  
+
   # Verificar puerto 8000
   if netstat -tlnp | grep -q ":8000"; then
     echo "✓ Puerto 8000 está en uso" | tee -a ../$LOG
   else
     echo "✗ Puerto 8000 no está en uso" | tee -a ../$LOG
   fi
-  
+
   # Probar conexión directa a Gunicorn
   if curl -s http://127.0.0.1:8000 > /dev/null; then
     echo "✓ Gunicorn responde correctamente" | tee -a ../$LOG
@@ -762,7 +761,7 @@ main() {
   configurar_gunicorn
   configurar_nginx
   verificar_servicios
-  
+
   echo "=== Despliegue finalizado ===" | tee -a ../$LOG
   echo "Revisá $LOG para detalles." | tee -a ../$LOG
   echo "La aplicación debería estar disponible en: http://$(hostname -I | awk '{print $1}')" | tee -a ../$LOG
@@ -770,12 +769,12 @@ main() {
 
 main
 ```
---- 
+
+---
 
 ### 🖼️ Resultados esperados
 
-![](https://bootcamp.295devops.com/assets/images/web-07-dc46d419d0e64314c6bbf9aea7214b81.png)
----
+## ![](https://bootcamp.295devops.com/assets/images/web-07-dc46d419d0e64314c6bbf9aea7214b81.png)
 
 **Para programar la verificación semanal con cron:**
 
@@ -790,10 +789,10 @@ main
 
 Podés separar la lógica en funciones como:
 
-* `instalar_dependencias()`
-* `clonar_app()`
-* `configurar_gunicorn()`
-* `configurar_nginx()`
+- `instalar_dependencias()`
+- `clonar_app()`
+- `configurar_gunicorn()`
+- `configurar_nginx()`
 
 ### 📦 Bonus extra:
 
@@ -822,7 +821,7 @@ Automatizar el despliegue de una app Node.js siguiendo estos pasos:
 
 ---
 
-### 📦 Repositorio de la Aplicación 
+### 📦 Repositorio de la Aplicación
 
 El código fuente de la aplicación Node.js para este desafío se encuentra en el siguiente repositorio (rama `ecommerce-ms`):
 
@@ -864,7 +863,5 @@ git clone -b ecommerce-ms https://github.com/roxsross/devops-static-web.git
 🔹 **Desafío 9**: Usa awk o sed en un script para procesar un archivo de log y extraer solo los mensajes de error.
 
 🔹 **Desafío 10**: Configura un cron job que ejecute un script para hacer respaldo (zip/tar) de un directorio diariamente.
-
-
 
 📢 Usá el hashtag **#DevOpsConRoxs** o compartilo en el canal de la comunidad. 🎯
