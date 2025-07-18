@@ -123,6 +123,20 @@ const sidebars = {
             'semana-04/dia28',
           ],
         },
+        {
+          type: 'category',
+          label: '5️⃣ Semana 5',
+          collapsed: true,
+          items: [
+            'semana-05/dia29',
+            'semana-05/dia30',
+            'semana-05/dia31',
+            'semana-05/dia32',
+            'semana-05/dia33',
+            'semana-05/dia34',
+            'semana-05/dia35',
+          ],
+        },
       ],
     },
     
