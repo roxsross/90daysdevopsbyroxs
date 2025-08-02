@@ -137,6 +137,20 @@ const sidebars = {
             'semana-05/dia35',
           ],
         },
+        {
+          type: 'category',
+          label: '6️⃣ Semana 6',
+          collapsed: true,
+          items: [
+            'semana-06/dia36',
+            'semana-06/dia37',
+            'semana-06/dia38',
+            'semana-06/dia39',
+            'semana-06/dia40',
+            'semana-06/dia41',
+            'semana-06/dia42',
+          ],
+        },
       ],
     },
     

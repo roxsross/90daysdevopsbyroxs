@@ -1,0 +1,5 @@
+{
+    "label": "Semana 6 - CI/CD y Kubernetes",
+    "position": 6,
+    "description": "Automatización completa: desde GitHub Actions hasta producción en K8s"
+  }

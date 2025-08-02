@@ -4,10 +4,24 @@ description: Trabajando con las unidades básicas de Kubernetes
 sidebar_position: 2
 ---
 
-
-## 🎯 Pods y Deployments - Los Bloques Fundamentales
+# Día 30 - Pods y Deployments
 
 ![](../../static/images/banner/5.png)
+
+## 📋 Agenda de hoy
+
+| Tiempo | Actividad | Descripción |
+|--------|-----------|-------------|
+| **10 min** | 🧩 Conceptos | ¿Qué son Pods y Deployments? |
+| **15 min** | 🏗️ Primer Pod | Crear y gestionar pods básicos |
+| **20 min** | 🚀 Deployments | Despliegues escalables y actualizaciones |
+| **10 min** | 🔄 Rolling Updates | Actualizaciones sin downtime |
+| **10 min** | 📊 Monitoreo | Logs, métricas y debugging |
+| **5 min** | 🎯 Ejercicios | Práctica hands-on |
+
+---
+
+## 🎯 Pods y Deployments - Los Bloques Fundamentales
 
 Hoy damos un salto clave en Kubernetes: aprenderás a dominar los **Pods** y **Deployments**, la base de toda aplicación moderna en la nube.
 
