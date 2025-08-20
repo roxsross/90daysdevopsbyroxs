@@ -290,6 +290,48 @@ docker run --rm saludo-roxs
 
 ---
 
+# 🎁 **Extra:** 🐳 Subir una Imagen a Docker Hub
+
+Guía rápida para subir una imagen Docker a Docker Hub.
+
+## ✅ Requisitos
+
+- 🧑💻 Tener una cuenta en [Docker Hub](https://hub.docker.com/)
+- 🛠️ Tener Docker instalado y en funcionamiento
+
+## 📦 Pasos
+
+1. 🔐 **Iniciar sesión en Docker Hub:**
+
+```bash
+docker login
+```
+
+2. 🛠️ **Construir tu imagen:**
+
+```bash
+docker build -t tu_usuario/nombre_imagen:tag .
+```
+3. ☁️ **Subir la Imagen a Docker Hub:**
+
+```bash
+docker push tu_usuario/nombre_imagen:tag
+```
+4. 🔍 **Verificar en Docker Hub:**
+
+Ve a [https://hub.docker.com/](https://hub.docker.com/) y confirma que la imagen aparece en tu repositorio.
+
+5. 📥🚀 **Descargar y ejecutar la imagen desde cualquier máquina**
+
+```bash
+docker run --name contenedor-app tu_usuario/nombre_imagen:tag
+
+```
+
+> 🤪💻¡Listo! Ahora tu imagen está disponible públicamente y puedes correrla en cualquier lugar 🚀
+
+---
+
 ## 💬 Tip de Roxs
 
 > “Construir tu primera imagen Docker es como armar tu propia nave espacial. Tenés el control total de qué incluye, cómo arranca y a dónde va. ¡Dale poder a tus despliegues!”
