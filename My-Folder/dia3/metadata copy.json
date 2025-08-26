@@ -1,0 +1,11 @@
+{
+  "name": "ubuntu/jammy64",
+  "versions": [{
+    "version": "20240415.0.0",
+    "providers": [{
+      "name": "vmware_desktop",
+      "url": "https://app.vagrantup.com/ubuntu/boxes/jammy64/versions/20240415.0.0/providers/vmware_desktop.box"
+    }]
+  }]
+}
+
